@@ -149,7 +149,7 @@ public class UnitMaster_Class {
 	public void select_UsageType() throws IOException {
 		String Usage_Type = UtilityClass.read("");
 		Usage_Type_Dropdown.click();
-		
+
 		List<WebElement> UsageTypes = driver.findElements(By.xpath(""));
 		for (WebElement UsageType : UsageTypes) {
 			if (UsageType.getText().equalsIgnoreCase(Usage_Type)) {
@@ -182,89 +182,85 @@ public class UnitMaster_Class {
 			}
 		}
 	}
-	
+
 	public void Select_Structure_Details() throws IOException {
 		String structure_Details = UtilityClass.read("");
 		Structure_Details.click();
 		List<WebElement> structurs = driver.findElements(By.xpath(""));
-		for(WebElement structur: structurs) {
-			if(structur.getText().equalsIgnoreCase(structure_Details)){
+		for (WebElement structur : structurs) {
+			if (structur.getText().equalsIgnoreCase(structure_Details)) {
 				structur.click();
 				return;
 			}
 		}
 	}
-	
+
 	public void Enter_Area() throws IOException {
 		Area_in_Sq_ft.sendKeys(UtilityClass.read(""));
 	}
-	
-	
 
-	
 	public void Select_Facing_Types() throws IOException {
 		String Facing_Types = UtilityClass.read("");
 		Facing_Types_Dropdown.click();
-		
+
 		List<WebElement> facings = driver.findElements(By.xpath(""));
-		for(WebElement facing: facings) {
-			if(facing.getText().equalsIgnoreCase(Facing_Types)){
+		for (WebElement facing : facings) {
+			if (facing.getText().equalsIgnoreCase(Facing_Types)) {
 				facing.click();
 				return;
 			}
 		}
 	}
-	
+
 	public void Select_Unit_Type() throws IOException {
 		String Unit_Type = UtilityClass.read("");
 		Unit_Type_Dropdown.click();
-		
+
 		List<WebElement> Units = driver.findElements(By.xpath(""));
-		for(WebElement Unit: Units) {
-			if(Unit.getText().equalsIgnoreCase(Unit_Type)){
+		for (WebElement Unit : Units) {
+			if (Unit.getText().equalsIgnoreCase(Unit_Type)) {
 				Unit.click();
 				return;
 			}
 		}
 	}
-	
 
 	public void Enter_censedNameFirst() throws IOException {
 		censedNameFirst.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_censedNameMiddle() throws IOException {
 		censedNameMiddle.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_censedNameLast() throws IOException {
 		censedNameLast.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_occupierFirstName() throws IOException {
 		occupierFirstName.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_occupierMiddleName() throws IOException {
 		occupierMiddleName.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_occupierLastName() throws IOException {
 		occupierLastName.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_originalSocietyName() throws IOException {
 		originalSocietyName.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Enter_originalSurveyNo() throws IOException {
 		originalSurveyNo.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void Select_Status() throws IOException {
 		Status_Dropdown.sendKeys(UtilityClass.read(""));
 	}
-	
+
 	public void ClickOnNext_button() throws IOException {
 		Next_button.click();
 	}

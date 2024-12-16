@@ -86,8 +86,7 @@ public class PocketMaster_Class {
 	        // Locate the scrollable container
 	        WebElement scrollableContainer = driver.findElement(By.cssSelector(".overflow-y-auto"));
 
-	        ((JavascriptExecutor) driver).executeScript(
-	            "arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll down by 100px
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll down by 100px
 
 	        wait.until(ExpectedConditions.elementToBeClickable(Master_Tab));
 

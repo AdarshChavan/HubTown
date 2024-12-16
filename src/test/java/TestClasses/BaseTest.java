@@ -11,17 +11,18 @@ import PageObjects.PocketMaster_Class;
 import PageObjects.SocietyMaster_Class;
 import PageObjects.UnitMaster_Class;
 
-public class BaseTest extends BaseClass{
-	
+public class BaseTest extends BaseClass {
+
 	@BeforeSuite
 	public void Browser() throws IOException {
 		InitializeBrowser();
 	}
-	
+
 	public LoginPage loginpage;
 	public PocketMaster_Class pocketMaster_Class;
 	public SocietyMaster_Class societyMaster_Class;
 	public UnitMaster_Class unitMaster_Class;
+
 	@BeforeClass
 	public void pageObjects() {
 		loginpage = new LoginPage(driver);
