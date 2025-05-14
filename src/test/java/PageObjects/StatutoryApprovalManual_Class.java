@@ -41,7 +41,7 @@ public class StatutoryApprovalManual_Class {
 	@FindBy(xpath="(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[1]")
 	WebElement PocketName_Dropdown;
 	
-	@FindBy(xpath="//span[text()='Select society']")
+	@FindBy(xpath="(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[2]")
 	WebElement SocietyName_Dropdown;
 	
 	@FindBy(xpath="//span[text()='Select unit']")
