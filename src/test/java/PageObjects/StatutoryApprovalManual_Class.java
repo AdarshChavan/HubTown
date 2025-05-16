@@ -23,8 +23,8 @@ public class StatutoryApprovalManual_Class {
 	@FindBy(xpath = "//li[text()=' Manual ']")
 	WebElement Manual_Statutory_Approval;
 
-	@FindBy(xpath = "//span[text()='government form']")
-	WebElement government_form;
+//	@FindBy(xpath = "//span[text()='government form']")
+//	WebElement government_form;
 
 	@FindBy(xpath = "//span[text()='Sec 33/38']")
 	WebElement Sec_33_38;
