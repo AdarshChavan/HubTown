@@ -69,6 +69,8 @@ public class StatutoryApprovalManual_Class {
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement ApprovalsNextButton;
 	
+	// -------------Government Annexure - Annex ----------------------------------
+	
 	@FindBy(xpath = "//input[@formcontrolname='annexCurrentoccupierFirstName']")
 	WebElement CurrentOccupier_FirstName;
 	
@@ -96,17 +98,61 @@ public class StatutoryApprovalManual_Class {
 	@FindBy(xpath = "//input[@formcontrolname='cencusedLastName']")
 	WebElement Census_LastName;
 	
-	@FindBy(xpath = "")
-	WebElement Annex_no;
+	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[5]")
+	WebElement ResidenceSince;
 	
-	@FindBy(xpath = "")
-	WebElement Annex_no;
+	@FindBy(xpath = "(//input[@placeholder='Enter Area'])[2]")
+	WebElement AreainSqft;
 	
-	@FindBy(xpath = "")
-	WebElement Annex_no;
+	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[6]")
+	WebElement UsageType;
 	
-	@FindBy(xpath = "")
-	WebElement Annex_no;
+	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[7]")
+	WebElement OccupancyStatus;
 	
+	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[8]")
+	WebElement Structuredetails;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Ep No.']")
+	WebElement EpNO;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Photo Pass Type']")
+	WebElement PhotoPassType;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Photo Pass No.']")
+	WebElement PhotoPassNo;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Structure No.']")
+	WebElement Structureno;
+	
+	@FindBy(xpath = "//button[text()='Next']")
+	WebElement AnnexNextButton;
+	
+	// -------------Government Annexure - Additional Info ----------------------------------
+	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
+//	
+//	@FindBy(xpath = "")
+//	WebElement Annex_no;
 
+	
 }
