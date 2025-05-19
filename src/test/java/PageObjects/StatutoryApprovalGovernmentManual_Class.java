@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class StatutoryApprovalManual_Class {
+public class StatutoryApprovalGovernmentManual_Class {
 
 	public WebDriver driver;
 
-	public StatutoryApprovalManual_Class(WebDriver driver) {
+	public StatutoryApprovalGovernmentManual_Class(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
