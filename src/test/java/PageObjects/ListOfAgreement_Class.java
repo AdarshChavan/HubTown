@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ListOfAgreement_Rent_Class {
+public class ListOfAgreement_Class {
 	
 	public WebDriver driver;
-	public ListOfAgreement_Rent_Class(WebDriver driver) {
+	public ListOfAgreement_Class(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -40,6 +40,21 @@ public class ListOfAgreement_Rent_Class {
 	
 	@FindBy(xpath="//input[@placeholder='Enter Payment Frequency']")
 	WebElement PaymentFreq;
+	
+	@FindBy(xpath="(//span[@aria-haspopup='listbox'])[2]")
+	WebElement Property;
+	
+	@FindBy(xpath="(//span[@aria-haspopup='listbox'])[3]")
+	WebElement Building;
+	
+	@FindBy(xpath="(//span[@aria-haspopup='listbox'])[4]")
+	WebElement Floor;
+	
+	@FindBy(xpath="(//span[@aria-haspopup='listbox'])[5]")
+	WebElement Flatno;
+	
+	@FindBy(xpath="//textarea[@placeholder='Description']")
+	WebElement AgreementTypeDescription;
 	
 	// -------------List Of Agreement "RENT" - Additional Charges ----------------------------------
 	
