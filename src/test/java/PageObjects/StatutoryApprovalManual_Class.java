@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class StatutoryApprovalGovernmentManual_Class {
+public class StatutoryApprovalManual_Class {
 
 	public WebDriver driver;
 
-	public StatutoryApprovalGovernmentManual_Class(WebDriver driver) {
+	public StatutoryApprovalManual_Class(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -66,10 +66,28 @@ public class StatutoryApprovalGovernmentManual_Class {
 	@FindBy(xpath = "//input[@placeholder='Select Reference Date']")
 	WebElement IssuedByReferenceDate;
 	
+	@FindBy(xpath = "//span[@aria-haspopup='listbox']")
+	WebElement InitiatedByForInternal;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Reason']")
+	WebElement Reason;
+
+	@FindBy(xpath = "//textarea[@placeholder='Enter Description']")
+	WebElement Description;
+
+	@FindBy(xpath = "//input[@formcontrolname='eligibleMonth']")
+	WebElement Eligibilitytobeproved;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Initiated By']")
+	WebElement InitiatedByforSection;
+
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement ApprovalsNextButton;
 	
-	// -------------Government Annexure - Annex ----------------------------------
+	@FindBy(xpath = "//button[text()='Previous']")
+	WebElement ApprovalsPreviousButton;
+	
+	// ------------- Annex(Government)/Approvals(Internal & Sec 33/38) ----------------------------------
 	
 	@FindBy(xpath = "//input[@formcontrolname='annexCurrentoccupierFirstName']")
 	WebElement CurrentOccupier_FirstName;
@@ -128,7 +146,7 @@ public class StatutoryApprovalGovernmentManual_Class {
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement AnnexNextButton;
 	
-	// -------------Government Annexure - Additional Info ----------------------------------
+	// ------------- Additional Info ----------------------------------
 	
 //	@FindBy(xpath = "")
 //	WebElement Annex_no;
@@ -154,5 +172,12 @@ public class StatutoryApprovalGovernmentManual_Class {
 //	@FindBy(xpath = "")
 //	WebElement Annex_no;
 
+	// ------------- Documents -------------------------------------------
+	
+		@FindBy(xpath = "//button[@label='Send for Approval']")
+		WebElement SendForApprovalButton;
+		
+		@FindBy(xpath = "//button[@label='Save as draft']")
+		WebElement SaveasdraftButton;
 	
 }
