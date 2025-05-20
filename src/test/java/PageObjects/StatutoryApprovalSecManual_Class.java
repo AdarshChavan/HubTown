@@ -60,10 +60,12 @@ public class StatutoryApprovalSecManual_Class {
 	@FindBy(xpath = "//button[text()='Previous']")
 	WebElement ApprovalsPreviousButton;
 
+	// -------------Section 33/38 - Documents ----------------------------------
+	
 	@FindBy(xpath = "//button[@label='Send for Approval']")
 	WebElement SendForApprovalButton;
 
 	@FindBy(xpath = "//button[@label='Save as draft']")
-	WebElement SaveasdraftButton;
+	WebElement SaveAsDraftButton;
 
 }

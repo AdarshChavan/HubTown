@@ -60,6 +60,8 @@ public class StatutoryApprovalInternalManual_Class {
 	@FindBy(xpath = "//button[text()='Previous']")
 	WebElement ApprovalsPreviousButton;
 	
+	// ------------- Internal - Documents -------------------------------------------
+	
 	@FindBy(xpath = "//button[@label='Send for Approval']")
 	WebElement SendForApprovalButton;
 	
