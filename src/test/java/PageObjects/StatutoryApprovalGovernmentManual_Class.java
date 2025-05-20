@@ -37,13 +37,13 @@ public class StatutoryApprovalGovernmentManual_Class {
 
 	// -------------Government Annexure - Basic Info ----------------------------------
 
-	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[1]")
+	@FindBy(xpath = "(//span[@aria-haspopup='listbox'])[1]")
 	WebElement PocketName_Dropdown;
 
-	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[2]")
+	@FindBy(xpath = "(//span[@aria-haspopup='listbox'])[2]")
 	WebElement SocietyName_Dropdown;
 
-	@FindBy(xpath = "(//span[@class='p-element p-dropdown-label p-inputtext ng-star-inserted'])[3]")
+	@FindBy(xpath = "(//span[@aria-haspopup='listbox'])[3]")
 	WebElement unitNumber_Dropdown;
 
 	@FindBy(xpath = "//button[text()='Next']")
