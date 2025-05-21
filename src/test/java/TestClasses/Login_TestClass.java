@@ -15,6 +15,7 @@ public class Login_TestClass extends BaseTest{
 		loginpage.enterInValidUserName();
 		loginpage.enterInValidPassWord();
 		loginpage.CLickOnSubmitButton();
+		
 	}
 	
 	@Test(priority = 2)
