@@ -77,14 +77,17 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement Next_button;
 
-	@FindBy(xpath = "//div[@class='overflow-y-auto']")
+	@FindBy(xpath = "//div[@class='side-bar-scrollbar']")
 	WebElement Left_Menu;
 
-	public void ClickOnMasterTab() {
+	
+	
+	public void ClickOnMasterTab() throws IOException {
 	    wait.until(ExpectedConditions.visibilityOf(Left_Menu));
+	   
 	    try {
 	        // Locate the scrollable container
-	        WebElement scrollableContainer = driver.findElement(By.cssSelector(".overflow-y-auto"));
+	        WebElement scrollableContainer = driver.findElement(By.xpath("(//div[@class='flex flex-column ng-star-inserted'])[2]"));
 
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll down by 100px
 

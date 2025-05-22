@@ -10,7 +10,7 @@ import PageObjects.PocketMaster_Class;
 public class PocketMaster_TestClass extends BaseTest{
 	
 	@Test(priority = 1)
-	public void ClickOnThePocketTab() {
+	public void ClickOnThePocketTab() throws IOException {
 		pocketMaster_Class.ClickOnMasterTab();
 	}
 	

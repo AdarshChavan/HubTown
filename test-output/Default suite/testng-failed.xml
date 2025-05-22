@@ -3,13 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestClasses.Login_TestClass">
+      <class name="TestClasses.PocketMaster_TestClass">
         <methods>
+          <include name="ClickOnCreateNewPocketButton"/>
           <include name="Browser"/>
-          <include name="enterValidCredentials"/>
+          <include name="Enter_Address"/>
+          <include name="ClickOnThePocketTab"/>
+          <include name="selectAreaType"/>
+          <include name="Enter_Location"/>
+          <include name="selectCompanyName"/>
+          <include name="EnterPocketName"/>
           <include name="pageObjects"/>
+          <include name="ClickOnNextButton"/>
         </methods>
-      </class> <!-- TestClasses.Login_TestClass -->
+      </class> <!-- TestClasses.PocketMaster_TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

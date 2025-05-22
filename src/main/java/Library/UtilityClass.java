@@ -13,7 +13,7 @@ import lombok.val;
 public class UtilityClass {
 
 	public static String read(String key) throws IOException {
-		FileInputStream file = new FileInputStream("A:\\Eclipse\\Automation_WorkSpace\\HubTown\\Propertie.properties");
+		FileInputStream file = new FileInputStream("C:\\Users\\admin\\git\\HubTown\\Properties.properties");
 		Properties prop = new Properties();
 		
 		prop.load(file);

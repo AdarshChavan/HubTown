@@ -3,17 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestClasses.SocietyMaster_TestClass">
+      <class name="TestClasses.PocketMaster_TestClass">
         <methods>
+          <include name="ClickOnCreateNewPocketButton"/>
           <include name="Browser"/>
-          <include name="ClickOntheNewSocietyButton"/>
-          <include name="ClickOntheScietyTab"/>
-          <include name="ClickOnNextButton"/>
-          <include name="clickOnSocietyTab"/>
+          <include name="Enter_Address"/>
+          <include name="selectAreaType"/>
+          <include name="selectCompanyName"/>
+          <include name="EnterPocketName"/>
           <include name="pageObjects"/>
-          <include name="SelectPocketName"/>
+          <include name="ClickOnNextButton"/>
         </methods>
-      </class> <!-- TestClasses.SocietyMaster_TestClass -->
+      </class> <!-- TestClasses.PocketMaster_TestClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
