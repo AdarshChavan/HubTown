@@ -5,14 +5,10 @@
     <classes>
       <class name="TestClasses.PocketMaster_TestClass">
         <methods>
-          <include name="ClickOnCreateNewPocketButton"/>
           <include name="Browser"/>
-          <include name="Enter_Address"/>
-          <include name="selectAreaType"/>
-          <include name="selectCompanyName"/>
-          <include name="EnterPocketName"/>
+          <include name="Invoice_cut_off_date"/>
+          <include name="SelectStartDate"/>
           <include name="pageObjects"/>
-          <include name="ClickOnNextButton"/>
         </methods>
       </class> <!-- TestClasses.PocketMaster_TestClass -->
     </classes>

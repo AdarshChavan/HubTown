@@ -11,7 +11,7 @@ import Library.LoginPage;
 public class Login_TestClass extends BaseTest{
 
 	@Test(priority = 1)
-	public void enterInValidCredentials() throws IOException {
+	public void enterInValidCredentials() throws IOException, InterruptedException {
 		loginpage.enterInValidUserName();
 		loginpage.enterInValidPassWord();
 		loginpage.CLickOnSubmitButton();
@@ -19,7 +19,7 @@ public class Login_TestClass extends BaseTest{
 	}
 	
 	@Test(priority = 2)
-	public void enterValidCredentials() throws IOException {
+	public void enterValidCredentials() throws IOException, InterruptedException {
 		
 		loginpage.ClearUserNameField();
 		loginpage.enterValidUserName();

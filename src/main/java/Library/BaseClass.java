@@ -3,6 +3,7 @@ package Library;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,6 +73,9 @@ public class BaseClass {
             }
 
             driver.manage().window().maximize();
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("document.body.style.zoom='80%';");
+
             System.out.println("Browser initialized successfully!");
 
         } catch (Exception e) {

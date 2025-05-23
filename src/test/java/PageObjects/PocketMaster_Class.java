@@ -1,14 +1,17 @@
 package PageObjects;
 
+import java.awt.RenderingHints.Key;
 import java.beans.Visibility;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.Month;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -53,6 +56,12 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//span[text()=' New Pocket ']")
 	WebElement New_Pocket_Button;
 
+	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
+	WebElement StarDateField;
+
+	
+	
+	
 	@FindBy(xpath = "//input[@placeholder='Enter Name']")
 	WebElement Pocket_Name;
 
@@ -65,7 +74,7 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//input[@placeholder='Enter Value']")
 	WebElement Unit_area_value;
 
-	@FindBy(xpath = "//input[@placeholder='YYYY-MM-DD']")
+	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
 	WebElement Invoice_cut_off_date;
 
 	@FindBy(xpath = "//span[text()='Select Location']")
@@ -105,7 +114,7 @@ public class PocketMaster_Class {
 
 	public void ClickOnPocketTab() {
 		
-		//Pocket_Area_Tab.click();
+		Pocket_Area_Tab.click();
 	}
 
 	public void clickOnNewPocketButton() throws InterruptedException {
@@ -114,6 +123,42 @@ public class PocketMaster_Class {
 		New_Pocket_Button.click();
 	}
 
+	public static String[] getMonthYear(String monthYear) {
+	    return monthYear.split(" ");
+	}
+
+	public void selectStartDate() throws IOException, InterruptedException {
+	    StarDateField.click();
+
+	    String day = UtilityClass.read("StartDateDay");
+	    String targetMonth = UtilityClass.read("StartDateMonth");
+	    String targetYear = UtilityClass.read("StartDateYear");
+
+	    while (true) {
+	        String[] current = getMonthYear(driver.findElement(By.xpath("//div[contains(@class, 'p-datepicker-header')]")).getText());
+
+	        if (current[0].equalsIgnoreCase(targetMonth) && current[1].equals(targetYear)) break;
+
+	        int currentMonth = Month.valueOf(current[0].toUpperCase()).getValue();
+	        int targetMonthNum = Month.valueOf(targetMonth.toUpperCase()).getValue();
+	        int currentYear = Integer.parseInt(current[1]);
+	        int targetYearNum = Integer.parseInt(targetYear);
+
+	        String navBtn = (targetYearNum < currentYear || 
+	                        (targetYearNum == currentYear && targetMonthNum < currentMonth))
+	                        ? "Previous Month" : "Next Month";
+
+	        driver.findElement(By.xpath("//button[@aria-label='" + navBtn + "']")).click();
+	        new WebDriverWait(driver, Duration.ofSeconds(2)).until(
+	            ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class, 'p-datepicker-header')]"))
+	        );
+	    }
+	    Thread.sleep(1000);
+	    driver.findElement(By.xpath("//div[@aria-label='Choose Date']//div//div//div//table//tbody//tr//td//span[text()='"+day+"']")).click();
+	}
+
+	
+	
 	public void EnterPocketName() throws IOException {
 		Pocket_Name.sendKeys(UtilityClass.read("pocketName"));
 	}
@@ -123,15 +168,18 @@ public class PocketMaster_Class {
 
 		Company_Name.click();
 
-		List<WebElement> Options = driver.findElements(By.xpath("//span[@class ='ng-star-inserted']"));
+		List<WebElement> Options = driver.findElements(By.xpath("//ul[@aria-label='Option List']"));
 
-		for (WebElement option : Options) {
-			if (option.getText().equalsIgnoreCase(companyName)) {
-				option.click();
-				return;
-			}
-		}
-
+//		for (WebElement option : Options) {
+//			if (option.getText().equalsIgnoreCase(companyName)) {
+//				option.click();
+//				return;
+//			}
+//		}
+		
+		Actions s = new Actions(driver);
+		s.sendKeys(companyName).sendKeys(Keys.ENTER);
+		
 	}
 	
 	public void selectAreaType() throws IOException, InterruptedException {
@@ -150,8 +198,34 @@ public class PocketMaster_Class {
 	}
 	
 	
-	public void Invoice_cut_off_date() {
-		System.out.println("Test");
+	public void Invoice_cut_off_date() throws InterruptedException, IOException {
+		Invoice_cut_off_date.click();
+		String day = UtilityClass.read("InvoicecutoffDateDay");
+	    String targetMonth = UtilityClass.read("InvoicecutoffDateMonth");
+	    String targetYear = UtilityClass.read("InvoicecutoffDateYear");
+
+	    while (true) {
+	        String[] current = getMonthYear(driver.findElement(By.xpath("//div[contains(@class, 'p-datepicker-header')]")).getText());
+
+	        if (current[0].equalsIgnoreCase(targetMonth) && current[1].equals(targetYear)) break;
+
+	        int currentMonth = Month.valueOf(current[0].toUpperCase()).getValue();
+	        int targetMonthNum = Month.valueOf(targetMonth.toUpperCase()).getValue();
+	        int currentYear = Integer.parseInt(current[1]);
+	        int targetYearNum = Integer.parseInt(targetYear);
+
+	        String navBtn = (targetYearNum < currentYear || 
+	                        (targetYearNum == currentYear && targetMonthNum < currentMonth))
+	                        ? "Previous Month" : "Next Month";
+
+	        driver.findElement(By.xpath("//button[@aria-label='" + navBtn + "']")).click();
+	        new WebDriverWait(driver, Duration.ofSeconds(2)).until(
+	            ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class, 'p-datepicker-header')]"))
+	        );
+	    }
+	    Thread.sleep(1000);
+	    driver.findElement(By.xpath("//div[@aria-label='Choose Date']//div//div//div//table//tbody//tr//td//span[text()='"+day+"']")).click();
+
 	}
 	
 	public void Enter_Location() throws IOException {

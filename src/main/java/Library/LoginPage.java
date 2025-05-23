@@ -47,7 +47,8 @@ public class LoginPage {
 	public void ClearPassWordField() throws IOException {
 		Password.clear();
 	}
-	public void CLickOnSubmitButton() {
+	public void CLickOnSubmitButton() throws InterruptedException {
 		submitButton.click();
+		Thread.sleep(4000);
 	}
 }
