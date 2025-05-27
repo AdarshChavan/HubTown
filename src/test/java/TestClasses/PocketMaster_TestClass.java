@@ -10,7 +10,7 @@ import PageObjects.PocketMaster_Class;
 public class PocketMaster_TestClass extends BaseTest{
 	
 	@Test(priority = 1)
-	public void ClickOnThePocketTab() throws IOException {
+	public void ClickOnThePocketTab() throws IOException, InterruptedException {
 		pocketMaster_Class.ClickOnMasterTab();
 	}
 	
@@ -27,7 +27,7 @@ public class PocketMaster_TestClass extends BaseTest{
 	
 	@Test(priority = 4)
 	public void SelectStartDate() throws IOException, InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		pocketMaster_Class.selectStartDate();
 	}
 	

@@ -8,10 +8,12 @@ import java.time.Month;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -58,9 +60,6 @@ public class PocketMaster_Class {
 
 	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
 	WebElement StarDateField;
-
-	
-	
 	
 	@FindBy(xpath = "//input[@placeholder='Enter Name']")
 	WebElement Pocket_Name;
@@ -91,7 +90,15 @@ public class PocketMaster_Class {
 
 	
 	
-	public void ClickOnMasterTab() throws IOException {
+	public void ClickOnMasterTab() throws IOException, InterruptedException {
+		Thread.sleep(2000);
+		try {
+		    Alert alert = driver.switchTo().alert();
+		    alert.dismiss(); // or alert.accept();
+		} catch (NoAlertPresentException e) {
+		    // No alert present, move on
+		}
+				
 	    wait.until(ExpectedConditions.visibilityOf(Left_Menu));
 	   
 	    try {
@@ -118,8 +125,8 @@ public class PocketMaster_Class {
 	}
 
 	public void clickOnNewPocketButton() throws InterruptedException {
-		//wait.until(ExpectedConditions.elementToBeClickable(New_Pocket_Button));
-		Thread.sleep(3000);
+		wait.until(ExpectedConditions.elementToBeClickable(New_Pocket_Button));
+		//Thread.sleep(1000);
 		New_Pocket_Button.click();
 	}
 

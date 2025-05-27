@@ -1,11 +1,15 @@
 package Library;
 
 import java.io.IOException;
+import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 	
@@ -49,6 +53,7 @@ public class LoginPage {
 	}
 	public void CLickOnSubmitButton() throws InterruptedException {
 		submitButton.click();
-		Thread.sleep(4000);
+		Thread.sleep(1000);
+		
 	}
 }

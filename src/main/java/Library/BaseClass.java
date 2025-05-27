@@ -2,6 +2,7 @@ package Library;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.MutableCapabilities;
@@ -28,11 +29,18 @@ public class BaseClass {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.addArguments("--incognito");
                     chromeOptions.addArguments("disable-infobars", "--disable-notifications", 
                             "--disable-extensions", "--disable-dev-shm-usage", 
                             "--no-sandbox", "--remote-allow-origins=*", 
                             "--window-size=1920,1080");
-
+                    chromeOptions.addArguments("--disable-notifications");
+                    chromeOptions.addArguments("--disable-infobars");
+                    chromeOptions.addArguments("--disable-popup-blocking");
+                    chromeOptions.addArguments("--disable-password-manager-reauthentication");
+                    chromeOptions.setExperimentalOption("prefs", Map.of(
+                            "credentials_enable_service", false,
+                            "profile.password_manager_enabled", false ));
                     driver = new ChromeDriver(chromeOptions);
                     driver.manage().window().maximize();
          	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -74,7 +82,7 @@ public class BaseClass {
 
             driver.manage().window().maximize();
             JavascriptExecutor js = (JavascriptExecutor) driver;
-            js.executeScript("document.body.style.zoom='80%';");
+            js.executeScript("document.documentElement.style.zoom='80%';");
 
             System.out.println("Browser initialized successfully!");
 
