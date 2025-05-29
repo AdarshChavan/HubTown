@@ -31,41 +31,47 @@ public class PocketMaster_TestClass extends BaseTest{
 		pocketMaster_Class.selectStartDate();
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
+	public void SelectEndDate() throws IOException, InterruptedException {
+		Thread.sleep(1000);
+		pocketMaster_Class.SelectEndDAte();
+	}
+	
+	@Test(priority = 6)
 	public void ClickOnTheNextButton() {
 		pocketMaster_Class.ClickOnNextButton();
 	}
-	@Test(priority = 5)
+	@Test(priority = 7)
 	public void EnterPocketName() throws IOException {
 		pocketMaster_Class.EnterPocketName();
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 8)
 	public void selectCompanyName() throws IOException {
 		pocketMaster_Class.selectComanyName();
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 9)
 	public void selectAreaType() throws IOException, InterruptedException {
 		pocketMaster_Class.selectAreaType();
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 10)
 	public void Invoice_cut_off_date() throws IOException, InterruptedException {
 		pocketMaster_Class.Invoice_cut_off_date();
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 11)
 	public void Enter_Location() throws IOException {
 		pocketMaster_Class.Enter_Location();
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 12)
 	public void Enter_Address() throws IOException {
 		pocketMaster_Class.Enter_Address();
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 13)
 	public void ClickOnNextButton() throws IOException {
 		pocketMaster_Class.ClickOnNextButton();
 	}

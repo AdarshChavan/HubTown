@@ -1,16 +1,15 @@
 package PageObjects;
 
-import java.awt.RenderingHints.Key;
-import java.beans.Visibility;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Month;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
@@ -19,10 +18,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.helpers.Util;
 
 import com.github.dockerjava.api.exception.NotFoundException;
 
@@ -60,7 +58,10 @@ public class PocketMaster_Class {
 
 	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
 	WebElement StarDateField;
-	
+
+	@FindBy(xpath = "//input[@placeholder='Select End Date']")
+	WebElement EndDateField;
+
 	@FindBy(xpath = "//input[@placeholder='Enter Name']")
 	WebElement Pocket_Name;
 
@@ -88,114 +89,71 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//div[@class='side-bar-scrollbar']")
 	WebElement Left_Menu;
 
-	
-	
+	@FindBy(xpath = "//input[@role='searchbox']")
+	WebElement DropdownSearchBox;
+
 	public void ClickOnMasterTab() throws IOException, InterruptedException {
 		Thread.sleep(2000);
 		try {
-		    Alert alert = driver.switchTo().alert();
-		    alert.dismiss(); // or alert.accept();
+			Alert alert = driver.switchTo().alert();
+			alert.dismiss(); // or alert.accept();
 		} catch (NoAlertPresentException e) {
-		    // No alert present, move on
+			// No alert present, move on
 		}
-				
-	    wait.until(ExpectedConditions.visibilityOf(Left_Menu));
-	   
-	    try {
-	        // Locate the scrollable container
-	        WebElement scrollableContainer = driver.findElement(By.xpath("(//div[@class='flex flex-column ng-star-inserted'])[2]"));
 
-	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll down by 100px
+		wait.until(ExpectedConditions.visibilityOf(Left_Menu));
 
-	        wait.until(ExpectedConditions.elementToBeClickable(Master_Tab));
+		try {
+			// Locate the scrollable container
+			WebElement scrollableContainer = driver
+					.findElement(By.xpath("(//div[@class='flex flex-column ng-star-inserted'])[2]"));
 
-	        // Click the Master Tab
-	        Master_Tab.click();
-	    } catch (NotFoundException e) {
-	        logger.error("Element not found", e);
-	    } catch (Exception e) {
-	        logger.error("Failed to click Master Tab", e);
-	    }
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll
+																													// down
+																													// by
+																													// 100px
+
+			wait.until(ExpectedConditions.elementToBeClickable(Master_Tab));
+
+			// Click the Master Tab
+			Master_Tab.click();
+		} catch (NotFoundException e) {
+			logger.error("Element not found", e);
+		} catch (Exception e) {
+			logger.error("Failed to click Master Tab", e);
+		}
 	}
 
-
 	public void ClickOnPocketTab() {
-		
+
 		Pocket_Area_Tab.click();
 	}
 
 	public void clickOnNewPocketButton() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(New_Pocket_Button));
-		//Thread.sleep(1000);
+		// Thread.sleep(1000);
 		New_Pocket_Button.click();
 	}
 
-	public static String[] getMonthYear(String monthYear) {
-	    return monthYear.split(" ");
-	}
-
-	public void selectStartDate() throws IOException, InterruptedException {
-	    StarDateField.click();
-
-	    String day = UtilityClass.read("StartDateDay");
-	    String targetMonth = UtilityClass.read("StartDateMonth");
-	    String targetYear = UtilityClass.read("StartDateYear");
-
-	    while (true) {
-	        String[] current = getMonthYear(driver.findElement(By.xpath("//div[contains(@class, 'p-datepicker-header')]")).getText());
-
-	        if (current[0].equalsIgnoreCase(targetMonth) && current[1].equals(targetYear)) break;
-
-	        int currentMonth = Month.valueOf(current[0].toUpperCase()).getValue();
-	        int targetMonthNum = Month.valueOf(targetMonth.toUpperCase()).getValue();
-	        int currentYear = Integer.parseInt(current[1]);
-	        int targetYearNum = Integer.parseInt(targetYear);
-
-	        String navBtn = (targetYearNum < currentYear || 
-	                        (targetYearNum == currentYear && targetMonthNum < currentMonth))
-	                        ? "Previous Month" : "Next Month";
-
-	        driver.findElement(By.xpath("//button[@aria-label='" + navBtn + "']")).click();
-	        new WebDriverWait(driver, Duration.ofSeconds(2)).until(
-	            ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class, 'p-datepicker-header')]"))
-	        );
-	    }
-	    Thread.sleep(1000);
-	    driver.findElement(By.xpath("//div[@aria-label='Choose Date']//div//div//div//table//tbody//tr//td//span[text()='"+day+"']")).click();
-	}
-
-	
-	
 	public void EnterPocketName() throws IOException {
 		Pocket_Name.sendKeys(UtilityClass.read("pocketName"));
 	}
 
 	public void selectComanyName() throws IOException {
-		String companyName = UtilityClass.read("CompanyName");
-
 		Company_Name.click();
-
-		List<WebElement> Options = driver.findElements(By.xpath("//ul[@aria-label='Option List']"));
-
-//		for (WebElement option : Options) {
-//			if (option.getText().equalsIgnoreCase(companyName)) {
-//				option.click();
-//				return;
-//			}
-//		}
-		
+		DropdownSearchBox.sendKeys(UtilityClass.read("CompanyName"));
 		Actions s = new Actions(driver);
-		s.sendKeys(companyName).sendKeys(Keys.ENTER);
-		
+		s.sendKeys(Keys.ENTER);
+
 	}
-	
+
 	public void selectAreaType() throws IOException, InterruptedException {
 		String areaType = UtilityClass.read("Areatype");
 		Unit_Area.click();
-		
+
 		List<WebElement> areatypes = driver.findElements(By.xpath("//ul[@class='p-dropdown-items ng-star-inserted']"));
-		for(WebElement areatype: areatypes) {
-			if(areatype.getText().equalsIgnoreCase(areaType)) {
+		for (WebElement areatype : areatypes) {
+			if (areatype.getText().equalsIgnoreCase(areaType)) {
 				areatype.click();
 				return;
 			}
@@ -203,59 +161,87 @@ public class PocketMaster_Class {
 			Unit_area_value.sendKeys(UtilityClass.read("Areavalue"));
 		}
 	}
-	
-	
-	public void Invoice_cut_off_date() throws InterruptedException, IOException {
-		Invoice_cut_off_date.click();
-		String day = UtilityClass.read("InvoicecutoffDateDay");
-	    String targetMonth = UtilityClass.read("InvoicecutoffDateMonth");
-	    String targetYear = UtilityClass.read("InvoicecutoffDateYear");
 
-	    while (true) {
-	        String[] current = getMonthYear(driver.findElement(By.xpath("//div[contains(@class, 'p-datepicker-header')]")).getText());
-
-	        if (current[0].equalsIgnoreCase(targetMonth) && current[1].equals(targetYear)) break;
-
-	        int currentMonth = Month.valueOf(current[0].toUpperCase()).getValue();
-	        int targetMonthNum = Month.valueOf(targetMonth.toUpperCase()).getValue();
-	        int currentYear = Integer.parseInt(current[1]);
-	        int targetYearNum = Integer.parseInt(targetYear);
-
-	        String navBtn = (targetYearNum < currentYear || 
-	                        (targetYearNum == currentYear && targetMonthNum < currentMonth))
-	                        ? "Previous Month" : "Next Month";
-
-	        driver.findElement(By.xpath("//button[@aria-label='" + navBtn + "']")).click();
-	        new WebDriverWait(driver, Duration.ofSeconds(2)).until(
-	            ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class, 'p-datepicker-header')]"))
-	        );
-	    }
-	    Thread.sleep(1000);
-	    driver.findElement(By.xpath("//div[@aria-label='Choose Date']//div//div//div//table//tbody//tr//td//span[text()='"+day+"']")).click();
-
-	}
-	
 	public void Enter_Location() throws IOException {
 		String Userlocation = UtilityClass.read("Location");
-		
+
 		List<WebElement> locations = driver.findElements(By.xpath("//div[@class='p-dropdown-items-wrapper']"));
-		for(WebElement location: locations) {
-			if(location.getText().equalsIgnoreCase(Userlocation));
+		for (WebElement location : locations) {
+			if (location.getText().equalsIgnoreCase(Userlocation))
+				;
 			location.click();
 			return;
-				
+
 		}
-		
+
 	}
-	
+
 	public void Enter_Address() throws IOException {
 		Address.sendKeys(UtilityClass.read("Address"));
 	}
-	
+
 	public void ClickOnNextButton() {
 		Next_button.click();
 	}
-	
-	
 
+	public String[] getMonthYear(String monthyear) {
+		return monthyear.split(" ");
+	}
+
+	public void SelectDate(WebElement dateField, String day, String month, String year) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+		dateField.click();
+		Thread.sleep(1000);
+
+		while (true) {
+
+			WebElement header = driver.findElement(By.xpath("//div[contains(@class, 'p-datepicker-header')]"));
+			String headerText = header.getText();
+			String[] current = getMonthYear(headerText);
+
+			if (current[0].equalsIgnoreCase(month) && current[1].equalsIgnoreCase(year))
+				break;
+
+			int currentMonth = Month.valueOf(current[0].toUpperCase()).getValue();
+			int targetMonth = Month.valueOf(month.toUpperCase()).getValue();
+			int currentYearNum = Integer.parseInt(current[1]);
+			int targetYearNum = Integer.parseInt(year);
+
+			String navBtn = (targetYearNum < currentYearNum
+					|| (targetYearNum == currentYearNum && targetMonth < currentMonth)) ? "Previous Month"
+							: "Next Month";
+
+			driver.findElement(By.xpath("//button[@aria-label='" + navBtn + "']")).click();
+
+			wait.until(ExpectedConditions.not(ExpectedConditions
+					.textToBe(By.xpath("//div[contains(@class, 'p-datepicker-header')]"), headerText)));
+		}
+
+		String xpath = "//div[@aria-label='Choose Date']//table//tbody//tr//td[not(contains(@class,'p-disabled'))]//span[text()='"
+				+ day + "']";
+		WebElement dayElement = driver.findElement(By.xpath(xpath));
+		dayElement.click();
+	}
+
+	public void selectStartDate() throws IOException, InterruptedException {
+		SelectDate(StarDateField,
+				UtilityClass.read("StartDateDay"), 
+				UtilityClass.read("StartDateMonth"),
+				UtilityClass.read("StartDateYear"));
+	}
+
+	public void Invoice_cut_off_date() throws IOException, InterruptedException {
+		SelectDate(Invoice_cut_off_date,
+				UtilityClass.read("InvoicecutoffDateDay"), 
+				UtilityClass.read("InvoicecutoffDateMonth"),
+				UtilityClass.read("InvoicecutoffDateYear"));
+	}
+	
+	public void SelectEndDAte() throws IOException, InterruptedException {
+		SelectDate(EndDateField,
+				UtilityClass.read("EndDateDay"), 
+				UtilityClass.read("EndDateMonth"),
+				UtilityClass.read("EndDateYear"));
+	}
 }

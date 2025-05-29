@@ -7,7 +7,6 @@
         <methods>
           <include name="Browser"/>
           <include name="Invoice_cut_off_date"/>
-          <include name="SelectStartDate"/>
           <include name="pageObjects"/>
         </methods>
       </class> <!-- TestClasses.PocketMaster_TestClass -->
