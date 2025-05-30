@@ -74,7 +74,7 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//input[@placeholder='Enter Value']")
 	WebElement Unit_area_value;
 
-	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
+	@FindBy(xpath = "//input[@placeholder='Select Date']")
 	WebElement Invoice_cut_off_date;
 
 	@FindBy(xpath = "//span[text()='Select Location']")
@@ -142,39 +142,35 @@ public class PocketMaster_Class {
 	public void selectComanyName() throws IOException {
 		Company_Name.click();
 		DropdownSearchBox.sendKeys(UtilityClass.read("CompanyName"));
-		Actions s = new Actions(driver);
-		s.sendKeys(Keys.ENTER);
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+		
 
 	}
 
 	public void selectAreaType() throws IOException, InterruptedException {
 		String areaType = UtilityClass.read("Areatype");
-		Unit_Area.click();
 
-		List<WebElement> areatypes = driver.findElements(By.xpath("//ul[@class='p-dropdown-items ng-star-inserted']"));
-		for (WebElement areatype : areatypes) {
-			if (areatype.getText().equalsIgnoreCase(areaType)) {
-				areatype.click();
-				return;
-			}
-			Thread.sleep(1000);
-			Unit_area_value.sendKeys(UtilityClass.read("Areavalue"));
+		if(areaType.equalsIgnoreCase("Square Meters")) {
+			Unit_Area.click();
+			Unit_Area.sendKeys(Keys.ARROW_DOWN);
+			Unit_Area.sendKeys(Keys.ENTER);	
 		}
+		
+	}
+	
+	public void EnterUnit_area_value() throws IOException {
+		Unit_area_value.sendKeys(UtilityClass.read("Areavalue"));
 	}
 
 	public void Enter_Location() throws IOException {
 		String Userlocation = UtilityClass.read("Location");
-
-		List<WebElement> locations = driver.findElements(By.xpath("//div[@class='p-dropdown-items-wrapper']"));
-		for (WebElement location : locations) {
-			if (location.getText().equalsIgnoreCase(Userlocation))
-				;
-			location.click();
-			return;
+		Location.sendKeys(Userlocation);
+		Location.sendKeys(Keys.ARROW_DOWN);
+		Location.sendKeys(Keys.ENTER);
 
 		}
 
-	}
 
 	public void Enter_Address() throws IOException {
 		Address.sendKeys(UtilityClass.read("Address"));

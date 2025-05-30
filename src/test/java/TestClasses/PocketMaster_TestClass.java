@@ -52,8 +52,9 @@ public class PocketMaster_TestClass extends BaseTest{
 	}
 	
 	@Test(priority = 9)
-	public void selectAreaType() throws IOException, InterruptedException {
+	public void selectAreaTypeandEnterAreaValue() throws IOException, InterruptedException {
 		pocketMaster_Class.selectAreaType();
+		pocketMaster_Class.EnterUnit_area_value();
 	}
 	
 	@Test(priority = 10)
