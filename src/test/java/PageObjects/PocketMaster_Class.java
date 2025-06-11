@@ -92,6 +92,82 @@ public class PocketMaster_Class {
 	@FindBy(xpath = "//input[@role='searchbox']")
 	WebElement DropdownSearchBox;
 
+	@FindBy(xpath = "//input[@formcontrolname='numOfTemples']")
+	WebElement Temples;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfChurches']")
+	WebElement Churches;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfHospitals']")
+	WebElement Hospitals;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfToilets']")
+	WebElement Toilets;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfFireBrigades']")
+	WebElement Brigades;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfWaterSupplies']")
+	WebElement WaterSupplies;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfMosques']")
+	WebElement Mosques;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfParks']")
+	WebElement Parks;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfSchools']")
+	WebElement School;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfBanks']")
+	WebElement Banks;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfRailwayStations']")
+	WebElement RailwayStations;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfPoliceStations']")
+	WebElement PoliceStations;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfColleges']")
+	WebElement Colleges;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfBusDepots']")
+	WebElement BusDepots;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfMarkets']")
+	WebElement Markets;
+
+	@FindBy(xpath = "//input[@formcontrolname='numOfElectricSupplies']")
+	WebElement ElectricSupplies;
+
+	@FindBy(xpath = "//span[text()='Select Usage Type']")
+	WebElement UsageType;
+
+	@FindBy(xpath = "//span[text()='Select Process Type']")
+	WebElement ProcessType;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Amount'])[1]")
+	WebElement FromAmountRange;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Amount'])[2]")
+	WebElement ToAmountRange;
+
+	@FindBy(xpath = "//input[@placeholder='Select Start Date']")
+	WebElement StartDate;
+
+	@FindBy(xpath = "//input[@placeholder='Select End Date']")
+	WebElement EndDate;
+
+	@FindBy(xpath = "//textarea[@placeholder='Enter Description']")
+	WebElement Description;
+
+	@FindBy(xpath = "//span[text()='Save']")
+	WebElement Save;
+
+	@FindBy(xpath = "//span[text()='Save Progress']")
+	WebElement SaveProgress;
+	
+
 	public void ClickOnMasterTab() throws IOException, InterruptedException {
 		Thread.sleep(2000);
 		try {
@@ -104,18 +180,13 @@ public class PocketMaster_Class {
 		wait.until(ExpectedConditions.visibilityOf(Left_Menu));
 
 		try {
-			// Locate the scrollable container
 			WebElement scrollableContainer = driver
 					.findElement(By.xpath("(//div[@class='flex flex-column ng-star-inserted'])[2]"));
 
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer); // Scroll
-																													// down
-																													// by
-																													// 100px
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop += 1000;", scrollableContainer);
 
 			wait.until(ExpectedConditions.elementToBeClickable(Master_Tab));
 
-			// Click the Master Tab
 			Master_Tab.click();
 		} catch (NotFoundException e) {
 			logger.error("Element not found", e);
@@ -131,7 +202,6 @@ public class PocketMaster_Class {
 
 	public void clickOnNewPocketButton() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(New_Pocket_Button));
-		// Thread.sleep(1000);
 		New_Pocket_Button.click();
 	}
 
@@ -144,21 +214,20 @@ public class PocketMaster_Class {
 		DropdownSearchBox.sendKeys(UtilityClass.read("CompanyName"));
 		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
 		DropdownSearchBox.sendKeys(Keys.ENTER);
-		
 
 	}
 
 	public void selectAreaType() throws IOException, InterruptedException {
 		String areaType = UtilityClass.read("Areatype");
 
-		if(areaType.equalsIgnoreCase("Square Meters")) {
+		if (areaType.equalsIgnoreCase("Square Meters")) {
 			Unit_Area.click();
 			Unit_Area.sendKeys(Keys.ARROW_DOWN);
-			Unit_Area.sendKeys(Keys.ENTER);	
+			Unit_Area.sendKeys(Keys.ENTER);
 		}
-		
+
 	}
-	
+
 	public void EnterUnit_area_value() throws IOException {
 		Unit_area_value.sendKeys(UtilityClass.read("Areavalue"));
 	}
@@ -169,8 +238,7 @@ public class PocketMaster_Class {
 		Location.sendKeys(Keys.ARROW_DOWN);
 		Location.sendKeys(Keys.ENTER);
 
-		}
-
+	}
 
 	public void Enter_Address() throws IOException {
 		Address.sendKeys(UtilityClass.read("Address"));
@@ -221,23 +289,121 @@ public class PocketMaster_Class {
 	}
 
 	public void selectStartDate() throws IOException, InterruptedException {
-		SelectDate(StarDateField,
-				UtilityClass.read("StartDateDay"), 
-				UtilityClass.read("StartDateMonth"),
+		SelectDate(StarDateField, UtilityClass.read("StartDateDay"), UtilityClass.read("StartDateMonth"),
 				UtilityClass.read("StartDateYear"));
 	}
 
 	public void Invoice_cut_off_date() throws IOException, InterruptedException {
-		SelectDate(Invoice_cut_off_date,
-				UtilityClass.read("InvoicecutoffDateDay"), 
-				UtilityClass.read("InvoicecutoffDateMonth"),
-				UtilityClass.read("InvoicecutoffDateYear"));
+		SelectDate(Invoice_cut_off_date, UtilityClass.read("InvoicecutoffDateDay"),
+				UtilityClass.read("InvoicecutoffDateMonth"), UtilityClass.read("InvoicecutoffDateYear"));
 	}
-	
+
 	public void SelectEndDAte() throws IOException, InterruptedException {
-		SelectDate(EndDateField,
-				UtilityClass.read("EndDateDay"), 
-				UtilityClass.read("EndDateMonth"),
+		SelectDate(EndDateField, UtilityClass.read("EndDateDay"), UtilityClass.read("EndDateMonth"),
 				UtilityClass.read("EndDateYear"));
+	}
+
+	public void EnterNoofTemples() throws IOException {
+		Temples.sendKeys(UtilityClass.read("Temples"));
+	}
+
+	public void EnterNoofChurches() throws IOException {
+		Churches.sendKeys(UtilityClass.read("Churches"));
+	}
+
+	public void EnterNoofHospitals() throws IOException {
+		Hospitals.sendKeys(UtilityClass.read("Hospitals"));
+	}
+
+	public void EnterNoofToilets() throws IOException {
+		Toilets.sendKeys(UtilityClass.read("Toilets"));
+	}
+
+	public void EnterFireBrigade() throws IOException {
+		Brigades.sendKeys(UtilityClass.read("FireBrigade"));
+	}
+
+	public void EnterWaterSupply() throws IOException {
+		WaterSupplies.sendKeys(UtilityClass.read("WaterSupply"));
+	}
+
+	public void EnterNoofmosques() throws IOException {
+		Mosques.sendKeys(UtilityClass.read("mosques"));
+	}
+
+	public void EnterNoofParks() throws IOException {
+		Parks.sendKeys(UtilityClass.read("Parks"));
+	}
+
+	public void EnterNoofSchool() throws IOException {
+		School.sendKeys(UtilityClass.read("School"));
+	}
+
+	public void EnterNoofbank() throws IOException {
+		Banks.sendKeys(UtilityClass.read("bank"));
+	}
+
+	public void EnterRailwaystation() throws IOException {
+		RailwayStations.sendKeys(UtilityClass.read("Railwaystation"));
+	}
+
+	public void EnterPolicestation() throws IOException {
+		PoliceStations.sendKeys(UtilityClass.read("Policestation"));
+	}
+
+	public void EnterNoofcollege() throws IOException {
+		Colleges.sendKeys(UtilityClass.read("college"));
+	}
+
+	public void EnterBusDepot() throws IOException {
+		BusDepots.sendKeys(UtilityClass.read("BusDepot"));
+	}
+
+	public void EnterNoofmarket() throws IOException {
+		Markets.sendKeys(UtilityClass.read("market"));
+	}
+
+	public void EnterElectricitySupply() throws IOException {
+		ElectricSupplies.sendKeys(UtilityClass.read("ElectricitySupply"));
+	}
+
+	public void SelectUsageType() throws IOException {
+		UsageType.click();
+		DropdownSearchBox.sendKeys(UtilityClass.read("UsageType"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+	}
+
+	public void SelectProcessType() throws IOException {
+		ProcessType.click();
+		DropdownSearchBox.sendKeys(UtilityClass.read("ProcessType"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+
+	}
+
+	public void EnterFromAmountRange() throws IOException {
+		FromAmountRange.sendKeys(UtilityClass.read("FromAmountRange"));
+	}
+
+	public void EnterToAmountRange() throws IOException {
+		ToAmountRange.sendKeys(UtilityClass.read("ToAmountRange"));
+	}
+
+	public void SelectRange1StartDate() throws InterruptedException, IOException {
+		SelectDate(StartDate, UtilityClass.read("Range1StartDateDay"),
+				UtilityClass.read("Range1StartDateMonth"), 
+				UtilityClass.read("Range1StartDateYear"));
+	}
+
+	public void SelectRange1EndDate() throws InterruptedException, IOException {
+		SelectDate(EndDate, UtilityClass.read("Range1EndDateDay"),
+				UtilityClass.read("Range1EndDateMonth"), 
+				UtilityClass.read("Range1EndDateYear"));
+	}
+
+	public void ClickOnTheSaveButton() {
+		Save.click();
+		SaveProgress.click();
 	}
 }

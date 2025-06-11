@@ -32,7 +32,7 @@ public class BaseClass {
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions chromeOptions = new ChromeOptions();
-				chromeOptions.addArguments("--incognito");
+				//chromeOptions.addArguments("--incognito");
 				chromeOptions.addArguments("disable-infobars", "--disable-notifications", "--disable-extensions",
 						"--disable-dev-shm-usage", "--no-sandbox", "--remote-allow-origins=*",
 						"--window-size=1920,1080");

@@ -6,7 +6,8 @@
       <class name="TestClasses.PocketMaster_TestClass">
         <methods>
           <include name="Browser"/>
-          <include name="Invoice_cut_off_date"/>
+          <include name="SelectEndDate"/>
+          <include name="SelectStartDate"/>
           <include name="pageObjects"/>
         </methods>
       </class> <!-- TestClasses.PocketMaster_TestClass -->
