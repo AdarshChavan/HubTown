@@ -3,14 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestClasses.PocketMaster_TestClass">
+      <class name="TestClasses.SocietyMaster_TestClass">
         <methods>
           <include name="Browser"/>
-          <include name="SelectEndDate"/>
-          <include name="SelectStartDate"/>
+          <include name="clickOntheSaveButton"/>
           <include name="pageObjects"/>
         </methods>
-      </class> <!-- TestClasses.PocketMaster_TestClass -->
+      </class> <!-- TestClasses.SocietyMaster_TestClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
