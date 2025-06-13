@@ -43,6 +43,13 @@ public class PocketMaster_Class {
 		js.executeScript("argument[0].scrollIntoView(true)", element);
 
 	}
+	
+	public void SelectDropdownOption(WebElement Dropdown, String Value) {
+		Dropdown.click();
+		DropdownSearchBox.sendKeys(Value);
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+	}
 
 	@FindBy(xpath = "//div//ul//li//a//span[text()='Master']")
 	WebElement Master_Tab;
@@ -209,12 +216,8 @@ public class PocketMaster_Class {
 		Pocket_Name.sendKeys(UtilityClass.read("pocketName"));
 	}
 
-	public void selectComanyName() throws IOException {
-		Company_Name.click();
-		DropdownSearchBox.sendKeys(UtilityClass.read("CompanyName"));
-		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
-		DropdownSearchBox.sendKeys(Keys.ENTER);
-
+	public void selectComanyName() throws IOException {		
+		SelectDropdownOption(Company_Name,UtilityClass.read("CompanyName"));
 	}
 
 	public void selectAreaType() throws IOException, InterruptedException {
@@ -233,11 +236,7 @@ public class PocketMaster_Class {
 	}
 
 	public void Enter_Location() throws IOException {
-		String Userlocation = UtilityClass.read("Location");
-		Location.sendKeys(Userlocation);
-		Location.sendKeys(Keys.ARROW_DOWN);
-		Location.sendKeys(Keys.ENTER);
-
+		SelectDropdownOption(Location,UtilityClass.read("Location"));
 	}
 
 	public void Enter_Address() throws IOException {
@@ -368,18 +367,11 @@ public class PocketMaster_Class {
 	}
 
 	public void SelectUsageType() throws IOException {
-		UsageType.click();
-		DropdownSearchBox.sendKeys(UtilityClass.read("UsageType"));
-		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
-		DropdownSearchBox.sendKeys(Keys.ENTER);
+		SelectDropdownOption(UsageType, UtilityClass.read("UsageType"));
 	}
 
 	public void SelectProcessType() throws IOException {
-		ProcessType.click();
-		DropdownSearchBox.sendKeys(UtilityClass.read("ProcessType"));
-		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
-		DropdownSearchBox.sendKeys(Keys.ENTER);
-
+		SelectDropdownOption(ProcessType, UtilityClass.read("ProcessType"));
 	}
 
 	public void EnterFromAmountRange() throws IOException {

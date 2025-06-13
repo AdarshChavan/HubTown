@@ -76,4 +76,48 @@ public class UnitMaster_TestClass extends BaseTest{
 		unitMaster_Class.Select_Facing_Types();
 	}
 	
+	@Test(priority = 15)
+	public void enter_censedNameFirst() throws IOException {
+		unitMaster_Class.Enter_censedNameFirst();
+	}
+	
+	@Test(priority = 16)
+	public void enter_censedNameMiddle() throws IOException {
+		unitMaster_Class.Enter_censedNameMiddle();
+	}
+	
+	@Test(priority = 17)
+	public void enter_censedNameLast() throws IOException {
+		unitMaster_Class.Enter_censedNameLast();
+	}
+	
+	@Test(priority = 18)
+	public void enter_occupierFirstName() throws IOException {
+		unitMaster_Class.Enter_occupierFirstName();
+	}
+	
+	@Test(priority = 19)
+	public void enter_occupierMiddleName() throws IOException {
+		unitMaster_Class.Enter_occupierMiddleName();
+	}
+	
+	@Test(priority = 20)
+	public void enter_occupierLastName() throws IOException {
+		unitMaster_Class.Enter_occupierLastName();
+	}
+	
+	@Test(priority = 21)
+	public void enter_originalSocietyName() throws IOException {
+		unitMaster_Class.Enter_originalSocietyName();
+	}
+	
+	@Test(priority = 22)
+	public void Enter_originalSurveyNo() throws IOException {
+		unitMaster_Class.Enter_originalSurveyNo();
+	}
+	
+	@Test(priority = 23)
+	public void ClickOnNext_button() throws IOException {
+		unitMaster_Class.ClickOnNext_button();
+	}
 }

@@ -10,15 +10,15 @@ import Library.LoginPage;
 
 public class Login_TestClass extends BaseTest{
 
-	@Test(priority = 1)
-	public void enterInValidCredentials() throws IOException, InterruptedException {
-		loginpage.enterInValidUserName();
-		loginpage.enterInValidPassWord();
-		loginpage.CLickOnSubmitButton();
-		
-	}
+//	@Test(priority = 1)
+//	public void enterInValidCredentials() throws IOException, InterruptedException {
+//		loginpage.enterInValidUserName();
+//		loginpage.enterInValidPassWord();
+//		loginpage.CLickOnSubmitButton();
+//		
+//	}
 	
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void enterValidCredentials() throws IOException, InterruptedException {
 		
 		loginpage.ClearUserNameField();

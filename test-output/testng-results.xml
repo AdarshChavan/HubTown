@@ -1,87 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+<testng-results ignored="0" total="40" passed="39" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-12T16:13:53 IST" name="Suite" finished-at="2025-06-12T16:14:07 IST" duration-ms="13954">
+  <suite started-at="2025-06-13T15:24:26 IST" name="Suite" finished-at="2025-06-13T15:25:00 IST" duration-ms="33503">
     <groups>
     </groups>
-    <test started-at="2025-06-12T16:13:53 IST" name="Test" finished-at="2025-06-12T16:14:07 IST" duration-ms="13954">
-      <class name="TestClasses.UnitMaster_TestClass">
-        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:13:56 IST" name="pageObjects" finished-at="2025-06-12T16:13:56 IST" duration-ms="34" status="PASS">
+    <test started-at="2025-06-13T15:24:26 IST" name="Test" finished-at="2025-06-13T15:25:00 IST" duration-ms="33503">
+      <class name="TestClasses.PocketMaster_TestClass">
+        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:29 IST" name="pageObjects" finished-at="2025-06-13T15:24:29 IST" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjects -->
-        <test-method signature="clickOnSurveyTab()[pri:1, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:13:56 IST" name="clickOnSurveyTab" finished-at="2025-06-12T16:14:01 IST" duration-ms="5139" status="PASS">
+        <test-method signature="ClickOnThePocketTab()[pri:1, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:29 IST" name="ClickOnThePocketTab" finished-at="2025-06-13T15:24:31 IST" duration-ms="2253" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnSurveyTab -->
-        <test-method signature="ClickOnUnitTab()[pri:2, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:01 IST" name="ClickOnUnitTab" finished-at="2025-06-12T16:14:01 IST" duration-ms="157" status="PASS">
+        </test-method> <!-- ClickOnThePocketTab -->
+        <test-method signature="ClickOnPocketTab()[pri:2, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:31 IST" name="ClickOnPocketTab" finished-at="2025-06-13T15:24:32 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnUnitTab -->
-        <test-method signature="ClickOnNewUnitButton()[pri:3, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:01 IST" name="ClickOnNewUnitButton" finished-at="2025-06-12T16:14:02 IST" duration-ms="455" status="PASS">
+        </test-method> <!-- ClickOnPocketTab -->
+        <test-method signature="ClickOnCreateNewPocketButton()[pri:3, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:32 IST" name="ClickOnCreateNewPocketButton" finished-at="2025-06-13T15:24:32 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnNewUnitButton -->
-        <test-method signature="clickManualOption()[pri:4, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:02 IST" name="clickManualOption" finished-at="2025-06-12T16:14:02 IST" duration-ms="457" status="PASS">
+        </test-method> <!-- ClickOnCreateNewPocketButton -->
+        <test-method signature="SelectStartDate()[pri:4, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:32 IST" name="SelectStartDate" finished-at="2025-06-13T15:24:37 IST" duration-ms="5172" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickManualOption -->
-        <test-method signature="select_Pocket()[pri:5, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:02 IST" name="select_Pocket" finished-at="2025-06-12T16:14:03 IST" duration-ms="691" status="PASS">
+        </test-method> <!-- SelectStartDate -->
+        <test-method signature="SelectEndDate()[pri:5, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:37 IST" name="SelectEndDate" finished-at="2025-06-13T15:24:40 IST" duration-ms="3079" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Pocket -->
-        <test-method signature="select_Society()[pri:6, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:03 IST" name="select_Society" finished-at="2025-06-12T16:14:04 IST" duration-ms="695" status="PASS">
+        </test-method> <!-- SelectEndDate -->
+        <test-method signature="ClickOnTheNextButton()[pri:6, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:40 IST" name="ClickOnTheNextButton" finished-at="2025-06-13T15:24:40 IST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Society -->
-        <test-method signature="unit_No()[pri:7, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="unit_No" finished-at="2025-06-12T16:14:04 IST" duration-ms="272" status="PASS">
+        </test-method> <!-- ClickOnTheNextButton -->
+        <test-method signature="EnterPocketName()[pri:7, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:40 IST" name="EnterPocketName" finished-at="2025-06-13T15:24:40 IST" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- unit_No -->
-        <test-method signature="owner_Name()[pri:8, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="owner_Name" finished-at="2025-06-12T16:14:04 IST" duration-ms="283" status="PASS">
+        </test-method> <!-- EnterPocketName -->
+        <test-method signature="selectCompanyName()[pri:8, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:40 IST" name="selectCompanyName" finished-at="2025-06-13T15:24:41 IST" duration-ms="332" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- owner_Name -->
-        <test-method signature="select_UsageType()[pri:9, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="select_UsageType" finished-at="2025-06-12T16:14:05 IST" duration-ms="486" status="PASS">
+        </test-method> <!-- selectCompanyName -->
+        <test-method signature="selectAreaTypeandEnterAreaValue()[pri:9, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:41 IST" name="selectAreaTypeandEnterAreaValue" finished-at="2025-06-13T15:24:41 IST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_UsageType -->
-        <test-method signature="select_Occupancy_Status()[pri:10, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:05 IST" name="select_Occupancy_Status" finished-at="2025-06-12T16:14:05 IST" duration-ms="478" status="PASS">
+        </test-method> <!-- selectAreaTypeandEnterAreaValue -->
+        <test-method signature="Invoice_cut_off_date()[pri:10, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:41 IST" name="Invoice_cut_off_date" finished-at="2025-06-13T15:24:43 IST" duration-ms="2129" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Occupancy_Status -->
-        <test-method signature="select_Residence()[pri:11, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:05 IST" name="select_Residence" finished-at="2025-06-12T16:14:06 IST" duration-ms="458" status="PASS">
+        </test-method> <!-- Invoice_cut_off_date -->
+        <test-method signature="Enter_Location()[pri:11, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:43 IST" name="Enter_Location" finished-at="2025-06-13T15:24:43 IST" duration-ms="284" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Residence -->
-        <test-method signature="select_Structure_Details()[pri:12, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="select_Structure_Details" finished-at="2025-06-12T16:14:06 IST" duration-ms="394" status="PASS">
+        </test-method> <!-- Enter_Location -->
+        <test-method signature="Enter_Address()[pri:12, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:43 IST" name="Enter_Address" finished-at="2025-06-13T15:24:43 IST" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Structure_Details -->
-        <test-method signature="enter_Area()[pri:13, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="enter_Area" finished-at="2025-06-12T16:14:06 IST" duration-ms="157" status="PASS">
+        </test-method> <!-- Enter_Address -->
+        <test-method signature="ClickOnNextButton()[pri:13, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:43 IST" name="ClickOnNextButton" finished-at="2025-06-13T15:24:43 IST" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enter_Area -->
-        <test-method signature="select_Facing_Types()[pri:14, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="select_Facing_Types" finished-at="2025-06-12T16:14:07 IST" duration-ms="536" status="PASS">
+        </test-method> <!-- ClickOnNextButton -->
+        <test-method signature="enterNoofTemples()[pri:14, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:43 IST" name="enterNoofTemples" finished-at="2025-06-13T15:24:43 IST" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_Facing_Types -->
-      </class> <!-- TestClasses.UnitMaster_TestClass -->
+        </test-method> <!-- enterNoofTemples -->
+        <test-method signature="enterNoofChurches()[pri:15, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofChurches" finished-at="2025-06-13T15:24:44 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofChurches -->
+        <test-method signature="enterNoofHospitals()[pri:16, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofHospitals" finished-at="2025-06-13T15:24:44 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofHospitals -->
+        <test-method signature="enterNoofToilets()[pri:17, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofToilets" finished-at="2025-06-13T15:24:44 IST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofToilets -->
+        <test-method signature="enterFireBrigade()[pri:18, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterFireBrigade" finished-at="2025-06-13T15:24:44 IST" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterFireBrigade -->
+        <test-method signature="enterWaterSupply()[pri:19, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterWaterSupply" finished-at="2025-06-13T15:24:44 IST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterWaterSupply -->
+        <test-method signature="enterNoofmosques()[pri:20, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofmosques" finished-at="2025-06-13T15:24:44 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofmosques -->
+        <test-method signature="enterNoofParks()[pri:21, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofParks" finished-at="2025-06-13T15:24:44 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofParks -->
+        <test-method signature="enterNoofSchool()[pri:22, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofSchool" finished-at="2025-06-13T15:24:44 IST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofSchool -->
+        <test-method signature="enterNoofbank()[pri:23, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterNoofbank" finished-at="2025-06-13T15:24:44 IST" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofbank -->
+        <test-method signature="enterRailwaystation()[pri:24, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterRailwaystation" finished-at="2025-06-13T15:24:44 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterRailwaystation -->
+        <test-method signature="enterPolicestation()[pri:25, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:44 IST" name="enterPolicestation" finished-at="2025-06-13T15:24:45 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterPolicestation -->
+        <test-method signature="enterNoofcollege()[pri:26, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="enterNoofcollege" finished-at="2025-06-13T15:24:45 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofcollege -->
+        <test-method signature="enterBusDepot()[pri:27, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="enterBusDepot" finished-at="2025-06-13T15:24:45 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterBusDepot -->
+        <test-method signature="enterNoofmarket()[pri:28, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="enterNoofmarket" finished-at="2025-06-13T15:24:45 IST" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoofmarket -->
+        <test-method signature="enterElectricitySupply()[pri:29, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="enterElectricitySupply" finished-at="2025-06-13T15:24:45 IST" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterElectricitySupply -->
+        <test-method signature="ClickOnNextButton2()[pri:30, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="ClickOnNextButton2" finished-at="2025-06-13T15:24:45 IST" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnNextButton2 -->
+        <test-method signature="selectUsageType()[pri:31, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="selectUsageType" finished-at="2025-06-13T15:24:45 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectUsageType -->
+        <test-method signature="selectProcessType()[pri:32, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:45 IST" name="selectProcessType" finished-at="2025-06-13T15:24:46 IST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProcessType -->
+        <test-method signature="enterFromAmountRange()[pri:33, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:46 IST" name="enterFromAmountRange" finished-at="2025-06-13T15:24:46 IST" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterFromAmountRange -->
+        <test-method signature="enterToAmountRange()[pri:34, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:46 IST" name="enterToAmountRange" finished-at="2025-06-13T15:24:46 IST" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterToAmountRange -->
+        <test-method signature="selectRange1StartDate()[pri:35, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:46 IST" name="selectRange1StartDate" finished-at="2025-06-13T15:24:48 IST" duration-ms="1990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectRange1StartDate -->
+        <test-method signature="selectRange1EndDate()[pri:36, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:48 IST" name="selectRange1EndDate" finished-at="2025-06-13T15:24:59 IST" duration-ms="10777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectRange1EndDate -->
+        <test-method signature="ClickOnNextButton3()[pri:37, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:59 IST" name="ClickOnNextButton3" finished-at="2025-06-13T15:24:59 IST" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickOnNextButton3 -->
+        <test-method signature="clickOnTheSaveButton()[pri:38, instance:TestClasses.PocketMaster_TestClass@5136d012]" started-at="2025-06-13T15:24:59 IST" name="clickOnTheSaveButton" finished-at="2025-06-13T15:25:00 IST" duration-ms="1162" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="p-button-label">...</span> is not clickable at point (1535, 133). Other element would receive the click: <div _ngcontent-ng-c3782473939="" class="p-d-flex">...</div>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [528a589076c4694f9a5a6c13761cbc0f, clickElement {id=f.040E51E42C74CB45B0910A4849268B69.d.80BA93CF8E3E36E7BA0D6B1522465F81.e.453}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58210}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58210/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (528a589076c4694f9a5a6c13761cbc0f)] -> xpath: //span[text()='Save']]
+Session ID: 528a589076c4694f9a5a6c13761cbc0f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="p-button-label">...</span> is not clickable at point (1535, 133). Other element would receive the click: <div _ngcontent-ng-c3782473939="" class="p-d-flex">...</div>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [528a589076c4694f9a5a6c13761cbc0f, clickElement {id=f.040E51E42C74CB45B0910A4849268B69.d.80BA93CF8E3E36E7BA0D6B1522465F81.e.453}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58210}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58210/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (528a589076c4694f9a5a6c13761cbc0f)] -> xpath: //span[text()='Save']]
+Session ID: 528a589076c4694f9a5a6c13761cbc0f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
+at PageObjects.PocketMaster_Class.ClickOnTheSaveButton(PocketMaster_Class.java:398)
+at TestClasses.PocketMaster_TestClass.clickOnTheSaveButton(PocketMaster_TestClass.java:203)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnTheSaveButton -->
+      </class> <!-- TestClasses.PocketMaster_TestClass -->
       <class name="TestClasses.Login_TestClass">
-        <test-method is-config="true" signature="Browser()[pri:0, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:43 IST" name="Browser" finished-at="2025-06-12T16:13:53 IST" duration-ms="9711" status="PASS">
+        <test-method is-config="true" signature="Browser()[pri:0, instance:TestClasses.Login_TestClass@152aa092]" started-at="2025-06-13T15:24:21 IST" name="Browser" finished-at="2025-06-13T15:24:26 IST" duration-ms="5813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Browser -->
-        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:53 IST" name="pageObjects" finished-at="2025-06-12T16:13:53 IST" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.Login_TestClass@152aa092]" started-at="2025-06-13T15:24:26 IST" name="pageObjects" finished-at="2025-06-13T15:24:26 IST" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjects -->
-        <test-method signature="enterInValidCredentials()[pri:1, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:53 IST" name="enterInValidCredentials" finished-at="2025-06-12T16:13:54 IST" duration-ms="1404" status="PASS">
+        <test-method signature="enterInValidCredentials()[pri:1, instance:TestClasses.Login_TestClass@152aa092]" started-at="2025-06-13T15:24:26 IST" name="enterInValidCredentials" finished-at="2025-06-13T15:24:28 IST" duration-ms="1297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInValidCredentials -->
-        <test-method signature="enterValidCredentials()[pri:2, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:54 IST" name="enterValidCredentials" finished-at="2025-06-12T16:13:56 IST" duration-ms="1566" status="PASS">
+        <test-method signature="enterValidCredentials()[pri:2, instance:TestClasses.Login_TestClass@152aa092]" started-at="2025-06-13T15:24:28 IST" name="enterValidCredentials" finished-at="2025-06-13T15:24:29 IST" duration-ms="1371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterValidCredentials -->
