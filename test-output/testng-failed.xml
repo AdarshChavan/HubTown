@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestClasses.SocietyMaster_TestClass">
+      <class name="TestClasses.UnitMaster_TestClass">
         <methods>
           <include name="Browser"/>
-          <include name="clickOntheSaveButton"/>
+          <include name="select_Facing_Types"/>
           <include name="pageObjects"/>
         </methods>
-      </class> <!-- TestClasses.SocietyMaster_TestClass -->
+      </class> <!-- TestClasses.UnitMaster_TestClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

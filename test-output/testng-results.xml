@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-11T18:46:27 IST" name="Suite" finished-at="2025-06-11T18:46:38 IST" duration-ms="10653">
+  <suite started-at="2025-06-12T16:13:53 IST" name="Suite" finished-at="2025-06-12T16:14:07 IST" duration-ms="13954">
     <groups>
     </groups>
-    <test started-at="2025-06-11T18:46:27 IST" name="Test" finished-at="2025-06-11T18:46:38 IST" duration-ms="10653">
-      <class name="TestClasses.SocietyMaster_TestClass">
-        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:30 IST" name="pageObjects" finished-at="2025-06-11T18:46:30 IST" duration-ms="26" status="PASS">
+    <test started-at="2025-06-12T16:13:53 IST" name="Test" finished-at="2025-06-12T16:14:07 IST" duration-ms="13954">
+      <class name="TestClasses.UnitMaster_TestClass">
+        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:13:56 IST" name="pageObjects" finished-at="2025-06-12T16:13:56 IST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjects -->
-        <test-method signature="clickOnSocietyTab()[pri:1, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:30 IST" name="clickOnSocietyTab" finished-at="2025-06-11T18:46:32 IST" duration-ms="2262" status="PASS">
+        <test-method signature="clickOnSurveyTab()[pri:1, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:13:56 IST" name="clickOnSurveyTab" finished-at="2025-06-12T16:14:01 IST" duration-ms="5139" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnSocietyTab -->
-        <test-method signature="ClickOntheScietyTab()[pri:2, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:32 IST" name="ClickOntheScietyTab" finished-at="2025-06-11T18:46:33 IST" duration-ms="499" status="PASS">
+        </test-method> <!-- clickOnSurveyTab -->
+        <test-method signature="ClickOnUnitTab()[pri:2, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:01 IST" name="ClickOnUnitTab" finished-at="2025-06-12T16:14:01 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOntheScietyTab -->
-        <test-method signature="ClickOntheNewSocietyButton()[pri:3, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:33 IST" name="ClickOntheNewSocietyButton" finished-at="2025-06-11T18:46:35 IST" duration-ms="2284" status="PASS">
+        </test-method> <!-- ClickOnUnitTab -->
+        <test-method signature="ClickOnNewUnitButton()[pri:3, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:01 IST" name="ClickOnNewUnitButton" finished-at="2025-06-12T16:14:02 IST" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOntheNewSocietyButton -->
-        <test-method signature="SelectPocketName()[pri:4, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:35 IST" name="SelectPocketName" finished-at="2025-06-11T18:46:36 IST" duration-ms="608" status="PASS">
+        </test-method> <!-- ClickOnNewUnitButton -->
+        <test-method signature="clickManualOption()[pri:4, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:02 IST" name="clickManualOption" finished-at="2025-06-12T16:14:02 IST" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SelectPocketName -->
-        <test-method signature="enterSocietyName()[pri:5, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterSocietyName" finished-at="2025-06-11T18:46:36 IST" duration-ms="184" status="PASS">
+        </test-method> <!-- clickManualOption -->
+        <test-method signature="select_Pocket()[pri:5, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:02 IST" name="select_Pocket" finished-at="2025-06-12T16:14:03 IST" duration-ms="691" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterSocietyName -->
-        <test-method signature="enterVillageName()[pri:6, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterVillageName" finished-at="2025-06-11T18:46:36 IST" duration-ms="150" status="PASS">
+        </test-method> <!-- select_Pocket -->
+        <test-method signature="select_Society()[pri:6, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:03 IST" name="select_Society" finished-at="2025-06-12T16:14:04 IST" duration-ms="695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterVillageName -->
-        <test-method signature="enterTalukaName()[pri:7, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterTalukaName" finished-at="2025-06-11T18:46:36 IST" duration-ms="157" status="PASS">
+        </test-method> <!-- select_Society -->
+        <test-method signature="unit_No()[pri:7, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="unit_No" finished-at="2025-06-12T16:14:04 IST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterTalukaName -->
-        <test-method signature="enterOwnerName()[pri:8, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterOwnerName" finished-at="2025-06-11T18:46:36 IST" duration-ms="159" status="PASS">
+        </test-method> <!-- unit_No -->
+        <test-method signature="owner_Name()[pri:8, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="owner_Name" finished-at="2025-06-12T16:14:04 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterOwnerName -->
-        <test-method signature="enterNoOfUnits()[pri:9, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterNoOfUnits" finished-at="2025-06-11T18:46:36 IST" duration-ms="131" status="PASS">
+        </test-method> <!-- owner_Name -->
+        <test-method signature="select_UsageType()[pri:9, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:04 IST" name="select_UsageType" finished-at="2025-06-12T16:14:05 IST" duration-ms="486" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterNoOfUnits -->
-        <test-method signature="enterArea()[pri:10, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:36 IST" name="enterArea" finished-at="2025-06-11T18:46:37 IST" duration-ms="131" status="PASS">
+        </test-method> <!-- select_UsageType -->
+        <test-method signature="select_Occupancy_Status()[pri:10, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:05 IST" name="select_Occupancy_Status" finished-at="2025-06-12T16:14:05 IST" duration-ms="478" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterArea -->
-        <test-method signature="enterDataVerifiedBy()[pri:11, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:37 IST" name="enterDataVerifiedBy" finished-at="2025-06-11T18:46:37 IST" duration-ms="141" status="PASS">
+        </test-method> <!-- select_Occupancy_Status -->
+        <test-method signature="select_Residence()[pri:11, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:05 IST" name="select_Residence" finished-at="2025-06-12T16:14:06 IST" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterDataVerifiedBy -->
-        <test-method signature="enterCTSNo()[pri:12, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:37 IST" name="enterCTSNo" finished-at="2025-06-11T18:46:37 IST" duration-ms="239" status="PASS">
+        </test-method> <!-- select_Residence -->
+        <test-method signature="select_Structure_Details()[pri:12, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="select_Structure_Details" finished-at="2025-06-12T16:14:06 IST" duration-ms="394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- enterCTSNo -->
-        <test-method signature="clickOntheSaveButton()[pri:13, instance:TestClasses.SocietyMaster_TestClass@4f67eb2a]" started-at="2025-06-11T18:46:37 IST" name="clickOntheSaveButton" finished-at="2025-06-11T18:46:38 IST" duration-ms="555" status="PASS">
+        </test-method> <!-- select_Structure_Details -->
+        <test-method signature="enter_Area()[pri:13, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="enter_Area" finished-at="2025-06-12T16:14:06 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOntheSaveButton -->
-      </class> <!-- TestClasses.SocietyMaster_TestClass -->
+        </test-method> <!-- enter_Area -->
+        <test-method signature="select_Facing_Types()[pri:14, instance:TestClasses.UnitMaster_TestClass@4a668b6e]" started-at="2025-06-12T16:14:06 IST" name="select_Facing_Types" finished-at="2025-06-12T16:14:07 IST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_Facing_Types -->
+      </class> <!-- TestClasses.UnitMaster_TestClass -->
       <class name="TestClasses.Login_TestClass">
-        <test-method is-config="true" signature="Browser()[pri:0, instance:TestClasses.Login_TestClass@55f616cf]" started-at="2025-06-11T18:46:20 IST" name="Browser" finished-at="2025-06-11T18:46:27 IST" duration-ms="6697" status="PASS">
+        <test-method is-config="true" signature="Browser()[pri:0, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:43 IST" name="Browser" finished-at="2025-06-12T16:13:53 IST" duration-ms="9711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Browser -->
-        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.Login_TestClass@55f616cf]" started-at="2025-06-11T18:46:27 IST" name="pageObjects" finished-at="2025-06-11T18:46:27 IST" duration-ms="69" status="PASS">
+        <test-method is-config="true" signature="pageObjects()[pri:0, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:53 IST" name="pageObjects" finished-at="2025-06-12T16:13:53 IST" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObjects -->
-        <test-method signature="enterInValidCredentials()[pri:1, instance:TestClasses.Login_TestClass@55f616cf]" started-at="2025-06-11T18:46:27 IST" name="enterInValidCredentials" finished-at="2025-06-11T18:46:28 IST" duration-ms="1406" status="PASS">
+        <test-method signature="enterInValidCredentials()[pri:1, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:53 IST" name="enterInValidCredentials" finished-at="2025-06-12T16:13:54 IST" duration-ms="1404" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterInValidCredentials -->
-        <test-method signature="enterValidCredentials()[pri:2, instance:TestClasses.Login_TestClass@55f616cf]" started-at="2025-06-11T18:46:28 IST" name="enterValidCredentials" finished-at="2025-06-11T18:46:30 IST" duration-ms="1502" status="PASS">
+        <test-method signature="enterValidCredentials()[pri:2, instance:TestClasses.Login_TestClass@1356d4d4]" started-at="2025-06-12T16:13:54 IST" name="enterValidCredentials" finished-at="2025-06-12T16:13:56 IST" duration-ms="1566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterValidCredentials -->

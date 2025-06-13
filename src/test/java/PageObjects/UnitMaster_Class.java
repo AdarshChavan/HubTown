@@ -1,15 +1,17 @@
 package PageObjects;
 
+import java.beans.Visibility;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Library.UtilityClass;
@@ -30,11 +32,17 @@ public class UnitMaster_Class {
 		js.executeScript("argument[0].scrollIntoView(true)", element);
 	}
 
-	@FindBy(xpath = "//span[text()='Unit/Hut']")
+	@FindBy(xpath = "//span[text()='Survey']")
+	WebElement SurveyTab;
+	
+	@FindBy(xpath = "//span[text()='Units']")
 	WebElement UnitTab;
 
 	@FindBy(xpath = "//span[text()=' New Unit ']")
 	WebElement NewUnit_button;
+	
+	@FindBy(xpath = "//li[text()=' Manual ']")
+	WebElement ManualUnitOption;
 
 	@FindBy(xpath = "//span[text()='Select Pocket']")
 	WebElement Pocket_Name_Field;
@@ -101,6 +109,14 @@ public class UnitMaster_Class {
 
 	@FindBy(xpath = " //button[text()='Next']")
 	WebElement Next_button;
+	
+	@FindBy(xpath = "//input[@role='searchbox']")
+	WebElement DropdownSearchBox;
+	
+	public void ClickOnSurveyTab() throws InterruptedException {
+		Thread.sleep(5000);
+		SurveyTab.click();
+	}	
 
 	public void clickOnUnitTab() {
 		UnitTab.click();
@@ -110,158 +126,132 @@ public class UnitMaster_Class {
 		NewUnit_button.click();
 	}
 
+	public void ClickManualOption() {
+		ManualUnitOption.click();
+	}
+	
+	
 	public void Select_Pocket() throws IOException {
-		String pocket = UtilityClass.read("");
 		Pocket_Name_Field.click();
-		List<WebElement> pocketnames = driver.findElements(By.xpath(""));
-		for (WebElement pocketname : pocketnames) {
-			if (pocketname.getText().equalsIgnoreCase(pocket))
-				;
-			pocketname.click();
-			return;
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("pocketName"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
 	}
 
 	public void Select_Society() throws IOException {
-		String Society = UtilityClass.read("");
 		Select_Society_Field.click();
-		List<WebElement> societynames = driver.findElements(By.xpath(""));
-		for (WebElement societyname : societynames) {
-			if (societyname.getText().equalsIgnoreCase(Society))
-				;
-			societyname.click();
-			return;
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("SocietyName"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
 	}
 
 	public void Unit_No() throws IOException {
-		Enter_Unit_No_Field.sendKeys(UtilityClass.read(""));
+		Enter_Unit_No_Field.sendKeys(UtilityClass.read("UnitNo"));
 	}
 
-	public void Ident_Number() throws IOException {
-		Ident_Number_Field.sendKeys(UtilityClass.read(""));
-	}
+//	public void Ident_Number() throws IOException {
+//		Ident_Number_Field.sendKeys(UtilityClass.read(""));
+//	}
 
 	public void Owner_Name() throws IOException {
-		Owner_Name_Field.sendKeys(UtilityClass.read(""));
+		Owner_Name_Field.sendKeys(UtilityClass.read("OwnerName"));
 	}
 
-	public void select_UsageType() throws IOException {
-		String Usage_Type = UtilityClass.read("");
+	public void Select_UsageType() throws IOException {
 		Usage_Type_Dropdown.click();
-
-		List<WebElement> UsageTypes = driver.findElements(By.xpath(""));
-		for (WebElement UsageType : UsageTypes) {
-			if (UsageType.getText().equalsIgnoreCase(Usage_Type)) {
-				UsageType.click();
-				return;
-			}
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("UsageType"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+		
 	}
 
 	public void Select_Occupancy_Status() throws IOException {
-		String Occupancy_Status = UtilityClass.read("");
+		
 		Occupancy_Status_Dropdown.click();
-		List<WebElement> allstatus = driver.findElements(By.xpath(""));
-		for (WebElement status : allstatus) {
-			if (status.getText().equalsIgnoreCase(Occupancy_Status)) {
-				status.click();
-			}
-
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("OccupancyStatus"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
 	}
 
 	public void Select_Residence() throws IOException {
-		String resedence_type = UtilityClass.read("");
 		Residence_Dropdown.click();
-		List<WebElement> types = driver.findElements(By.xpath(""));
-		for (WebElement type : types) {
-			if (type.getText().equalsIgnoreCase(resedence_type)) {
-				type.click();
-				return;
-			}
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("Residence"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
+		
 	}
 
 	public void Select_Structure_Details() throws IOException {
-		String structure_Details = UtilityClass.read("");
 		Structure_Details.click();
-		List<WebElement> structurs = driver.findElements(By.xpath(""));
-		for (WebElement structur : structurs) {
-			if (structur.getText().equalsIgnoreCase(structure_Details)) {
-				structur.click();
-				return;
-			}
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("StructureDetails"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
 	}
 
 	public void Enter_Area() throws IOException {
-		Area_in_Sq_ft.sendKeys(UtilityClass.read(""));
+		Area_in_Sq_ft.sendKeys(UtilityClass.read("Area"));
 	}
 
 	public void Select_Facing_Types() throws IOException {
-		String Facing_Types = UtilityClass.read("");
+		WebElement scrollableDiv = driver.findElement(By.xpath("//main[@class='main-content scrollable']"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// Scroll down inside the div by 200 pixels
+		js.executeScript("arguments[0].scrollTop = arguments[0].scrollTop + 200;", scrollableDiv);
+
+		
+		//scroll(Facing_Types_Dropdown);
+		wait.until(ExpectedConditions.visibilityOf(Facing_Types_Dropdown));
 		Facing_Types_Dropdown.click();
-
-		List<WebElement> facings = driver.findElements(By.xpath(""));
-		for (WebElement facing : facings) {
-			if (facing.getText().equalsIgnoreCase(Facing_Types)) {
-				facing.click();
-				return;
-			}
-		}
+		DropdownSearchBox.sendKeys(UtilityClass.read("FacingTypes"));
+		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+		DropdownSearchBox.sendKeys(Keys.ENTER);
 	}
 
-	public void Select_Unit_Type() throws IOException {
-		String Unit_Type = UtilityClass.read("");
-		Unit_Type_Dropdown.click();
-
-		List<WebElement> Units = driver.findElements(By.xpath(""));
-		for (WebElement Unit : Units) {
-			if (Unit.getText().equalsIgnoreCase(Unit_Type)) {
-				Unit.click();
-				return;
-			}
-		}
-	}
-
-	public void Enter_censedNameFirst() throws IOException {
-		censedNameFirst.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_censedNameMiddle() throws IOException {
-		censedNameMiddle.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_censedNameLast() throws IOException {
-		censedNameLast.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_occupierFirstName() throws IOException {
-		occupierFirstName.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_occupierMiddleName() throws IOException {
-		occupierMiddleName.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_occupierLastName() throws IOException {
-		occupierLastName.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_originalSocietyName() throws IOException {
-		originalSocietyName.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Enter_originalSurveyNo() throws IOException {
-		originalSurveyNo.sendKeys(UtilityClass.read(""));
-	}
-
-	public void Select_Status() throws IOException {
-		Status_Dropdown.sendKeys(UtilityClass.read(""));
-	}
-
-	public void ClickOnNext_button() throws IOException {
-		Next_button.click();
-	}
+//	public void Select_Unit_Type() throws IOException {
+//		Unit_Type_Dropdown.click();
+//		DropdownSearchBox.sendKeys(UtilityClass.read(""));
+//		DropdownSearchBox.sendKeys(Keys.ARROW_DOWN);
+//		DropdownSearchBox.sendKeys(Keys.ENTER);
+//	}
+//
+//	public void Enter_censedNameFirst() throws IOException {
+//		censedNameFirst.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_censedNameMiddle() throws IOException {
+//		censedNameMiddle.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_censedNameLast() throws IOException {
+//		censedNameLast.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_occupierFirstName() throws IOException {
+//		occupierFirstName.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_occupierMiddleName() throws IOException {
+//		occupierMiddleName.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_occupierLastName() throws IOException {
+//		occupierLastName.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_originalSocietyName() throws IOException {
+//		originalSocietyName.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Enter_originalSurveyNo() throws IOException {
+//		originalSurveyNo.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void Select_Status() throws IOException {
+//		Status_Dropdown.sendKeys(UtilityClass.read(""));
+//	}
+//
+//	public void ClickOnNext_button() throws IOException {
+//		Next_button.click();
+//	}
 }
