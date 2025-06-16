@@ -120,6 +120,78 @@ public class UnitMaster_Class {
 	@FindBy(xpath = "//input[@role='searchbox']")
 	WebElement DropdownSearchBox;
 
+	@FindBy(xpath = "//input[@placeholder='Enter Age']")
+	WebElement Age_Field;
+
+	@FindBy(xpath = "//span[text()='Select Religion']")
+	WebElement Religion_Field;
+
+	@FindBy(xpath = "//span[text()='Select Cast']")
+	WebElement Cast_Field;
+
+	@FindBy(xpath = "//span[text()='Select Language']")
+	WebElement Language_Field;
+
+	@FindBy(xpath = "//span[text()='Select Family Type']")
+	WebElement FamilyType_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Qualification']")
+	WebElement Qualification_Field;
+
+	@FindBy(xpath = "//span[text()='Select Marital Status']")
+	WebElement MaritalStatus_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Contact Number']")
+	WebElement ContactNumber_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Occupation']")
+	WebElement Occupation_Field;
+
+	@FindBy(xpath = "//span[text()='Select Disability']")
+	WebElement Disability_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Nominee Name']")
+	WebElement NomineeName_Field;
+
+	@FindBy(xpath = "//textarea[@placeholder='Enter Address']")
+	WebElement Address_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Bank Name']")
+	WebElement BankName_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Account Number']")
+	WebElement BankAccountNo_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter IFSC Code']")
+	WebElement IFSCCode_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Branch Name']")
+	WebElement BranchName_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Rent Amount']")
+	WebElement RentAmount_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Rent Recipient']")
+	WebElement PaysRentto_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Document Code']")
+	WebElement OtherDoc_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Household Services']")
+	WebElement HouseholdServices_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Company Name']")
+	WebElement CompanyDetails_Field;
+
+	@FindBy(xpath = "//span[@aria-haspopup='listbox']")
+	WebElement DocumentType_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Reference No']")
+	WebElement ReferenceNo_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Remark']")
+	WebElement Remark_Field;
+
 	public void ClickOnSurveyTab() throws InterruptedException {
 		Thread.sleep(5000);
 		SurveyTab.click();
@@ -231,4 +303,89 @@ public class UnitMaster_Class {
 	public void ClickOnNext_button() throws IOException {
 		Next_button.click();
 	}
+
+	public void EnterAge() throws IOException {
+		Age_Field.sendKeys(UtilityClass.read("Age"));
+	}
+
+	public void SelectReligion() throws IOException {
+		SelectDropdownOption(Religion_Field, UtilityClass.read("Religion"));
+	}
+
+	public void SelectCast() throws IOException {
+		SelectDropdownOption(Cast_Field, UtilityClass.read("Cast"));
+	}
+
+	public void SelectLanguage() throws IOException {
+		SelectDropdownOption(Language_Field, UtilityClass.read("Language"));
+	}
+
+	public void SelectFamilyType() throws IOException {
+		SelectDropdownOption(FamilyType_Field, UtilityClass.read("FamilyType"));
+	}
+
+	public void EnterQualification() throws IOException {
+		Qualification_Field.sendKeys(UtilityClass.read("Qualification"));
+	}
+
+	public void SelectMaritalStatus() throws IOException {
+		SelectDropdownOption(MaritalStatus_Field, UtilityClass.read("MaritalStatus"));
+	}
+
+	public void EnterContactNo() throws IOException {
+		ContactNumber_Field.sendKeys(UtilityClass.read("ContactNo"));
+	}
+
+	public void EnterOccupation() throws IOException {
+		Occupation_Field.sendKeys(UtilityClass.read("Occupation"));
+	}
+
+	public void SelectDisability() throws IOException {
+		SelectDropdownOption(Disability_Field, UtilityClass.read("Disability"));
+	}
+
+	public void EnterNomineeName() throws IOException {
+		NomineeName_Field.sendKeys(UtilityClass.read("NomineeName"));
+	}
+
+	public void EnterAddress() throws IOException {
+		Address_Field.sendKeys(UtilityClass.read("Address"));
+	}
+
+	public void EnterBankName() throws IOException {
+		BankName_Field.sendKeys(UtilityClass.read("BankName"));
+	}
+
+	public void EnterBankAccountNo() throws IOException {
+		BankAccountNo_Field.sendKeys(UtilityClass.read("BankAccountNo"));
+	}
+
+	public void EnterIFSCCode() throws IOException {
+		IFSCCode_Field.sendKeys(UtilityClass.read("IFSCCode"));
+	}
+
+	public void EnterBranchName() throws IOException {
+		BranchName_Field.sendKeys(UtilityClass.read("BranchName"));
+	}
+
+	public void EnterRentAmount() throws IOException {
+		RentAmount_Field.sendKeys(UtilityClass.read("RentAmount"));
+	}
+
+	public void EnterPaysRentto() throws IOException {
+		PaysRentto_Field.sendKeys(UtilityClass.read("PaysRentto"));
+	}
+
+	public void EnterOtherDoc() throws IOException {
+		OtherDoc_Field.sendKeys(UtilityClass.read("OtherDoc"));
+	}
+
+	public void EnterHouseholdServices() throws IOException {
+		HouseholdServices_Field.sendKeys(UtilityClass.read("HouseholdServices"));
+	}
+
+	public void EnterCompanyDetails() throws IOException {
+		CompanyDetails_Field.sendKeys(UtilityClass.read("CompanyDetails"));
+	}
+
 }
