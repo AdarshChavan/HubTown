@@ -380,12 +380,12 @@ public class UnitMaster_Class {
 		OtherDoc_Field.sendKeys(UtilityClass.read("OtherDoc"));
 	}
 
-//	public void EnterHouseholdServices() throws IOException {
-//		HouseholdServices_Field.sendKeys(UtilityClass.read("HouseholdServices"));
-//	}
-//
-//	public void EnterCompanyDetails() throws IOException {
-//		CompanyDetails_Field.sendKeys(UtilityClass.read("CompanyDetails"));
-//	}
+	public void EnterHouseholdServices() throws IOException {
+		HouseholdServices_Field.sendKeys(UtilityClass.read("HouseholdServices"));
+	}
+
+	public void EnterCompanyDetails() throws IOException {
+		CompanyDetails_Field.sendKeys(UtilityClass.read("CompanyDetails"));
+	}
 
 }
