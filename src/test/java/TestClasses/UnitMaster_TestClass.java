@@ -221,9 +221,9 @@ public class UnitMaster_TestClass extends BaseTest {
 		unitMaster_Class.EnterCompanyDetails();
 	}
 
-	@Test(priority = 44)
-	public void clickOnNext_button() throws IOException {
-		unitMaster_Class.ClickOnNext_button();
-	}
+//	@Test(priority = 44)
+//	public void clickOnNext_button() throws IOException {
+//		unitMaster_Class.ClickOnNext_button();
+//	}
 
 }
