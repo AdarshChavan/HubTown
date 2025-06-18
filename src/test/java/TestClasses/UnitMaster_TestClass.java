@@ -1,5 +1,6 @@
 package TestClasses;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -225,5 +226,34 @@ public class UnitMaster_TestClass extends BaseTest {
 	public void clickOnNext_button() throws IOException {
 		unitMaster_Class.ClickOnNext_button();
 	}
+	
+	
+	@Test(priority = 45)
+	public void selectDocumentType() throws IOException {
+		unitMaster_Class.SelectDocumentType();
+	}
+	
+	@Test(priority = 46)
+	public void enterReferenceNo() throws IOException {
+		unitMaster_Class.EnterReferenceNo();
+	}
+	
+	@Test(priority = 47)
+	public void enterRemark() throws IOException {
+		unitMaster_Class.EnterRemark();
+	}
+	
+//	@Test(priority = 48)
+//	public void selectDocument() throws IOException, InterruptedException, AWTException {
+//		unitMaster_Class.SelectDocument();
+//	}
+	
+	@Test(priority = 49)
+	public void clickOnNext_button2() throws IOException {
+		unitMaster_Class.ClickOnNext_button();
+	}
+	
+	
+	
 
 }

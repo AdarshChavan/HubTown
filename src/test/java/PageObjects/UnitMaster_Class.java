@@ -1,6 +1,6 @@
 package PageObjects;
 
-import java.beans.Visibility;
+
 import java.io.IOException;
 import java.time.Duration;
 
@@ -191,6 +191,24 @@ public class UnitMaster_Class {
 
 	@FindBy(xpath = "//input[@placeholder='Enter Remark']")
 	WebElement Remark_Field;
+
+	@FindBy(xpath = "//input[@type='file']")
+	WebElement fileupload;
+
+	@FindBy(xpath = "//button[text()='Browse files']")
+	WebElement BrowseFileButton;
+//	
+//	@FindBy(xpath = "")
+//	WebElement ;
+//	
+//	@FindBy(xpath = "")
+//	WebElement ;
+//	
+//	@FindBy(xpath = "")
+//	WebElement ;
+//	
+//	@FindBy(xpath = "")
+//	WebElement ;
 
 	public void ClickOnSurveyTab() throws InterruptedException {
 		Thread.sleep(5000);
@@ -386,6 +404,108 @@ public class UnitMaster_Class {
 
 	public void EnterCompanyDetails() throws IOException {
 		CompanyDetails_Field.sendKeys(UtilityClass.read("CompanyDetails"));
+	}
+
+	public void SelectDocumentType() throws IOException {
+		SelectDropdownOption(DocumentType_Field, UtilityClass.read("DocumentType"));
+	}
+
+	public void EnterReferenceNo() throws IOException {
+		ReferenceNo_Field.sendKeys(UtilityClass.read("ReferenceNo"));
+	}
+
+	public void EnterRemark() throws IOException {
+		Remark_Field.sendKeys(UtilityClass.read("Remark"));
+	}
+
+	public void SelectDocument() throws IOException, InterruptedException {
+		BrowseFileButton.click();
+		Thread.sleep(1000);
+		fileupload.sendKeys(UtilityClass.read("Browsefile"));
+	}
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[1]")
+	WebElement FamilySize_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[2]")
+	WebElement NoofAdults_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[3]")
+	WebElement NoofChildrenbelow14_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[4]")
+	WebElement NoofChildrenbetween15To20_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[5]")
+	WebElement NoofWorkingPersons_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[6]")
+	WebElement TotalIncomeofFamily_Field;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Name']")
+	WebElement Name_Field;
+
+	@FindBy(xpath = "//span[@aria-label='Select Gender']")
+	WebElement Gender_Dropdown;
+
+	@FindBy(xpath = "//span[@aria-label='Select Relation']")
+	WebElement Relation_Dropdown;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Age']")
+	WebElement Member_Age_Field;
+
+	@FindBy(xpath = "(//input[@placeholder='Enter Number'])[7]")
+	WebElement MonthlyIncome_Field;
+
+	@FindBy(xpath = "//span[@aria-label='Select Marital Status']")
+	WebElement MaritalStatus_Dropdown;
+
+	public void EnterFamilySize() throws IOException {
+		FamilySize_Field.sendKeys(UtilityClass.read("FamilySize"));
+	}
+
+	public void EnterNoOfAdults() throws IOException {
+		NoofAdults_Field.sendKeys(UtilityClass.read("NoofAdults"));
+	}
+
+	public void EnterNoofChildrenBelow14() throws IOException {
+		NoofChildrenbelow14_Field.sendKeys(UtilityClass.read("NoofChildren(below14)"));
+	}
+
+	public void EnterNoofChildrenBetween15To20() throws IOException {
+		NoofChildrenbetween15To20_Field.sendKeys(UtilityClass.read("NoofChildren(15-20)"));
+	}
+
+	public void EnterNoofWorkingPersons() throws IOException {
+		NoofWorkingPersons_Field.sendKeys(UtilityClass.read("NoofWorkingPersons"));
+	}
+
+	public void EnterTotalIncomeofFamily() throws IOException {
+		TotalIncomeofFamily_Field.sendKeys(UtilityClass.read("TotalIncomeofFamily"));
+	}
+
+	public void EnterName() throws IOException {
+		Name_Field.sendKeys(UtilityClass.read("MemberName"));
+	}
+
+	public void SelectGender() throws IOException {
+		Gender_Dropdown.sendKeys(UtilityClass.read("MemberGender"));
+	}
+
+	public void SelectRelation() throws IOException {
+		Relation_Dropdown.sendKeys(UtilityClass.read("MemberRelation"));
+	}
+
+	public void EnterMemberAge() throws IOException {
+		Age_Field.sendKeys(UtilityClass.read("MemberAge"));
+	}
+
+	public void SelectMemberMaritalStatus() throws IOException {
+		MaritalStatus_Dropdown.sendKeys(UtilityClass.read("MemberMaritalStatus"));
+	}
+
+	public void EnterMonthlyIncome() throws IOException {
+		MonthlyIncome_Field.sendKeys(UtilityClass.read("MemberMonthlyIncome"));
 	}
 
 }

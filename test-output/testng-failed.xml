@@ -5,35 +5,9 @@
     <classes>
       <class name="TestClasses.UnitMaster_TestClass">
         <methods>
-          <include name="snterContactNo"/>
-          <include name="enterBankName"/>
-          <include name="clickOnNext_button"/>
-          <include name="selectLanguage"/>
           <include name="selectDisability"/>
-          <include name="enterNomineeName"/>
-          <include name="enterOtherDoc"/>
-          <include name="enterBranchName"/>
-          <include name="enterBankAccountNo"/>
-          <include name="select_Society"/>
-          <include name="pageObjects"/>
-          <include name="selectReligion"/>
           <include name="Browser"/>
-          <include name="enterCompanyDetails"/>
-          <include name="selectMaritalStatus"/>
-          <include name="snterOccupation"/>
-          <include name="unit_No"/>
-          <include name="select_Occupancy_Status"/>
-          <include name="selectCast"/>
-          <include name="snterQualification"/>
-          <include name="enterHouseholdServices"/>
-          <include name="enterPaysRentto"/>
-          <include name="select_UsageType"/>
-          <include name="select_Residence"/>
-          <include name="enterAge"/>
-          <include name="enterAddress"/>
-          <include name="selectFamilyType"/>
-          <include name="enterRentAmount"/>
-          <include name="select_Structure_Details"/>
+          <include name="pageObjects"/>
         </methods>
       </class> <!-- TestClasses.UnitMaster_TestClass -->
     </classes>

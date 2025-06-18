@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">45 methods,   45 passed</span>
+                    <span class="method-stats">48 methods, 1 failed,   47 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="selectDisability">selectDisability</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -183,6 +197,16 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="enterReferenceNo">enterReferenceNo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="enterRemark">enterRemark</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="enterRentAmount">enterRentAmount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -248,7 +272,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="selectDisability">selectDisability</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestClasses.UnitMaster_TestClass" class="method navigator-link" hash-for-method="selectDocumentType">selectDocumentType</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -338,6 +362,47 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestClasses.UnitMaster_TestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectDisability">
+                  </a> <!-- selectDisability -->
+                  <span class="method-name">selectDisability</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span role=&quot;combobox&quot; pautofocus=&quot;&quot; class=&quot;p-element p-dropdown-label p-inputtext p-placeholder ng-star-inserted&quot; ng-reflect-ng-class=&quot;[object Object]&quot; ng-reflect-content=&quot;&quot; ng-reflect-tooltip-position=&quot;right&quot; ng-reflect-position-style=&quot;absolute&quot; aria-disabled=&quot;false&quot; aria-label=&quot;Select Disability&quot; aria-haspopup=&quot;listbox&quot; aria-expanded=&quot;false&quot; tabindex=&quot;0&quot;&gt;...&lt;/span&gt; is not clickable at point (630, 506). Other element would receive the click: &lt;div _ngcontent-ng-c2432322248=&quot;&quot; class=&quot;stepper-controls&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=137.0.7151.104)
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79ff90f70a6dee9f27052da1c73d9774, clickElement {id=f.F71BF4085EDE7C100190B8DE9DA6A26C.d.E73B9C872DA0C62A3830269219B39E4E.e.3018}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53058}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53058/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (79ff90f70a6dee9f27052da1c73d9774)] -&gt; xpath: //span[text()=&apos;Select Disability&apos;]]
+Session ID: 79ff90f70a6dee9f27052da1c73d9774
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
+	at PageObjects.UnitMaster_Class.SelectDropdownOption(UnitMaster_Class.java:42)
+	at PageObjects.UnitMaster_Class.SelectDisability(UnitMaster_Class.java:370)
+	at TestClasses.UnitMaster_TestClass.selectDisability(UnitMaster_TestClass.java:172)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -473,6 +538,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="enterReferenceNo">
+                  </a> <!-- enterReferenceNo -->
+                  <span class="method-name">enterReferenceNo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterRemark">
+                  </a> <!-- enterRemark -->
+                  <span class="method-name">enterRemark</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="enterRentAmount">
                   </a> <!-- enterRentAmount -->
                   <span class="method-name">enterRentAmount</span>
@@ -557,9 +636,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="selectDisability">
-                  </a> <!-- selectDisability -->
-                  <span class="method-name">selectDisability</span>
+                  <a name="selectDocumentType">
+                  </a> <!-- selectDocumentType -->
+                  <span class="method-name">selectDocumentType</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -722,192 +801,204 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(45);
+data.addRows(48);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'clickOnSurveyTab')
 data.setCell(0, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(0, 3, 5104);
+data.setCell(0, 3, 5110);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'enterValidCredentials')
 data.setCell(1, 2, 'TestClasses.Login_TestClass')
-data.setCell(1, 3, 1427);
+data.setCell(1, 3, 1498);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'select_Occupancy_Status')
+data.setCell(2, 1, 'select_Society')
 data.setCell(2, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(2, 3, 526);
+data.setCell(2, 3, 1218);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'select_Facing_Types')
+data.setCell(3, 1, 'selectDisability')
 data.setCell(3, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(3, 3, 512);
+data.setCell(3, 3, 1158);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'select_UsageType')
+data.setCell(4, 1, 'select_Occupancy_Status')
 data.setCell(4, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(4, 3, 496);
+data.setCell(4, 3, 1082);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'select_Society')
+data.setCell(5, 1, 'select_Pocket')
 data.setCell(5, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(5, 3, 460);
+data.setCell(5, 3, 999);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'select_Structure_Details')
+data.setCell(6, 1, 'select_UsageType')
 data.setCell(6, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(6, 3, 435);
+data.setCell(6, 3, 793);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'select_Pocket')
+data.setCell(7, 1, 'clickManualOption')
 data.setCell(7, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(7, 3, 363);
+data.setCell(7, 3, 578);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'select_Residence')
+data.setCell(8, 1, 'select_Facing_Types')
 data.setCell(8, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(8, 3, 352);
+data.setCell(8, 3, 558);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'selectFamilyType')
+data.setCell(9, 1, 'select_Structure_Details')
 data.setCell(9, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(9, 3, 282);
+data.setCell(9, 3, 541);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'selectLanguage')
+data.setCell(10, 1, 'select_Residence')
 data.setCell(10, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(10, 3, 264);
+data.setCell(10, 3, 495);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'selectReligion')
+data.setCell(11, 1, 'selectCast')
 data.setCell(11, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(11, 3, 261);
+data.setCell(11, 3, 462);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'selectCast')
+data.setCell(12, 1, 'ClickOnNewUnitButton')
 data.setCell(12, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(12, 3, 261);
+data.setCell(12, 3, 458);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'selectDisability')
+data.setCell(13, 1, 'selectMaritalStatus')
 data.setCell(13, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(13, 3, 253);
+data.setCell(13, 3, 404);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'selectMaritalStatus')
+data.setCell(14, 1, 'selectDocumentType')
 data.setCell(14, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(14, 3, 251);
+data.setCell(14, 3, 403);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'ClickOnNewUnitButton')
+data.setCell(15, 1, 'selectReligion')
 data.setCell(15, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(15, 3, 239);
+data.setCell(15, 3, 401);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'clickManualOption')
+data.setCell(16, 1, 'selectFamilyType')
 data.setCell(16, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(16, 3, 216);
+data.setCell(16, 3, 369);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'enter_Area')
+data.setCell(17, 1, 'selectLanguage')
 data.setCell(17, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(17, 3, 188);
+data.setCell(17, 3, 367);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'enterAge')
+data.setCell(18, 1, 'unit_No')
 data.setCell(18, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(18, 3, 157);
+data.setCell(18, 3, 216);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'owner_Name')
+data.setCell(19, 1, 'enterAge')
 data.setCell(19, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(19, 3, 147);
+data.setCell(19, 3, 194);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'unit_No')
+data.setCell(20, 1, 'owner_Name')
 data.setCell(20, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(20, 3, 138);
+data.setCell(20, 3, 184);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'ClickOnUnitTab')
+data.setCell(21, 1, 'enter_Area')
 data.setCell(21, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(21, 3, 114);
+data.setCell(21, 3, 182);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'enterNomineeName')
+data.setCell(22, 1, 'snterContactNo')
 data.setCell(22, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(22, 3, 111);
+data.setCell(22, 3, 178);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'enter_censedNameFirst')
+data.setCell(23, 1, 'enterNomineeName')
 data.setCell(23, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(23, 3, 105);
+data.setCell(23, 3, 177);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'enter_originalSocietyName')
+data.setCell(24, 1, 'enterAddress')
 data.setCell(24, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(24, 3, 104);
+data.setCell(24, 3, 176);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'enterHouseholdServices')
+data.setCell(25, 1, 'enterOtherDoc')
 data.setCell(25, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(25, 3, 103);
+data.setCell(25, 3, 173);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'enterBankAccountNo')
+data.setCell(26, 1, 'enterPaysRentto')
 data.setCell(26, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(26, 3, 94);
+data.setCell(26, 3, 168);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'enterBankName')
+data.setCell(27, 1, 'enterBankAccountNo')
 data.setCell(27, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(27, 3, 93);
+data.setCell(27, 3, 168);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'snterContactNo')
+data.setCell(28, 1, 'enterBankName')
 data.setCell(28, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(28, 3, 92);
+data.setCell(28, 3, 166);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'enter_occupierLastName')
+data.setCell(29, 1, 'enterHouseholdServices')
 data.setCell(29, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(29, 3, 92);
+data.setCell(29, 3, 159);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'enterPaysRentto')
+data.setCell(30, 1, 'enterBranchName')
 data.setCell(30, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(30, 3, 91);
+data.setCell(30, 3, 158);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'enterCompanyDetails')
+data.setCell(31, 1, 'enterReferenceNo')
 data.setCell(31, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(31, 3, 90);
+data.setCell(31, 3, 158);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'enter_censedNameLast')
+data.setCell(32, 1, 'ClickOnUnitTab')
 data.setCell(32, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(32, 3, 88);
+data.setCell(32, 3, 156);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'enterAddress')
+data.setCell(33, 1, 'enter_occupierMiddleName')
 data.setCell(33, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(33, 3, 88);
+data.setCell(33, 3, 154);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'enterBranchName')
+data.setCell(34, 1, 'snterQualification')
 data.setCell(34, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(34, 3, 86);
+data.setCell(34, 3, 151);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'enterOtherDoc')
+data.setCell(35, 1, 'enter_censedNameFirst')
 data.setCell(35, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(35, 3, 86);
+data.setCell(35, 3, 150);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'enter_occupierFirstName')
+data.setCell(36, 1, 'enter_originalSocietyName')
 data.setCell(36, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(36, 3, 86);
+data.setCell(36, 3, 149);
 data.setCell(37, 0, 37)
 data.setCell(37, 1, 'snterOccupation')
 data.setCell(37, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(37, 3, 83);
+data.setCell(37, 3, 142);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'snterQualification')
+data.setCell(38, 1, 'enter_occupierFirstName')
 data.setCell(38, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(38, 3, 83);
+data.setCell(38, 3, 142);
 data.setCell(39, 0, 39)
-data.setCell(39, 1, 'clickOnNext_button1')
+data.setCell(39, 1, 'enterRentAmount')
 data.setCell(39, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(39, 3, 82);
+data.setCell(39, 3, 141);
 data.setCell(40, 0, 40)
-data.setCell(40, 1, 'enter_originalSurveyNo')
+data.setCell(40, 1, 'enterCompanyDetails')
 data.setCell(40, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(40, 3, 82);
+data.setCell(40, 3, 140);
 data.setCell(41, 0, 41)
-data.setCell(41, 1, 'enter_occupierMiddleName')
+data.setCell(41, 1, 'clickOnNext_button1')
 data.setCell(41, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(41, 3, 80);
+data.setCell(41, 3, 139);
 data.setCell(42, 0, 42)
-data.setCell(42, 1, 'enter_censedNameMiddle')
+data.setCell(42, 1, 'enter_censedNameLast')
 data.setCell(42, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(42, 3, 79);
+data.setCell(42, 3, 136);
 data.setCell(43, 0, 43)
-data.setCell(43, 1, 'enterRentAmount')
+data.setCell(43, 1, 'enter_originalSurveyNo')
 data.setCell(43, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(43, 3, 78);
+data.setCell(43, 3, 135);
 data.setCell(44, 0, 44)
-data.setCell(44, 1, 'clickOnNext_button')
+data.setCell(44, 1, 'enter_occupierLastName')
 data.setCell(44, 2, 'TestClasses.UnitMaster_TestClass')
-data.setCell(44, 3, 74);
+data.setCell(44, 3, 133);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'enter_censedNameMiddle')
+data.setCell(45, 2, 'TestClasses.UnitMaster_TestClass')
+data.setCell(45, 3, 128);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'enterRemark')
+data.setCell(46, 2, 'TestClasses.UnitMaster_TestClass')
+data.setCell(46, 3, 126);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'clickOnNext_button')
+data.setCell(47, 2, 'TestClasses.UnitMaster_TestClass')
+data.setCell(47, 3, 121);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -947,194 +1038,208 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">pageObjects</span>
-                <span class="method-start">5504 ms</span>
+                <span class="method-start">6621 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">enterValidCredentials</span>
-                <span class="method-start">5618 ms</span>
+                <span class="method-start">6714 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestClasses.UnitMaster_TestClass</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">pageObjects</span>
-                <span class="method-start">7065 ms</span>
+                <span class="method-start">8261 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">clickOnSurveyTab</span>
-                <span class="method-start">7088 ms</span>
+                <span class="method-start">8272 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ClickOnUnitTab</span>
-                <span class="method-start">12194 ms</span>
+                <span class="method-start">13397 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ClickOnNewUnitButton</span>
-                <span class="method-start">12310 ms</span>
+                <span class="method-start">13580 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickManualOption</span>
-                <span class="method-start">12551 ms</span>
+                <span class="method-start">14046 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Pocket</span>
-                <span class="method-start">12773 ms</span>
+                <span class="method-start">14631 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Society</span>
-                <span class="method-start">13142 ms</span>
+                <span class="method-start">15636 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">unit_No</span>
-                <span class="method-start">13607 ms</span>
+                <span class="method-start">16865 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">owner_Name</span>
-                <span class="method-start">13750 ms</span>
+                <span class="method-start">17085 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_UsageType</span>
-                <span class="method-start">13902 ms</span>
+                <span class="method-start">17280 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Occupancy_Status</span>
-                <span class="method-start">14402 ms</span>
+                <span class="method-start">18078 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Residence</span>
-                <span class="method-start">14931 ms</span>
+                <span class="method-start">19163 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Structure_Details</span>
-                <span class="method-start">15286 ms</span>
+                <span class="method-start">19661 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_Area</span>
-                <span class="method-start">15724 ms</span>
+                <span class="method-start">20209 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">select_Facing_Types</span>
-                <span class="method-start">15914 ms</span>
+                <span class="method-start">20393 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_censedNameFirst</span>
-                <span class="method-start">16428 ms</span>
+                <span class="method-start">20953 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_censedNameMiddle</span>
-                <span class="method-start">16535 ms</span>
+                <span class="method-start">21107 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_censedNameLast</span>
-                <span class="method-start">16617 ms</span>
+                <span class="method-start">21244 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_occupierFirstName</span>
-                <span class="method-start">16715 ms</span>
+                <span class="method-start">21385 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_occupierMiddleName</span>
-                <span class="method-start">16813 ms</span>
+                <span class="method-start">21530 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_occupierLastName</span>
-                <span class="method-start">16898 ms</span>
+                <span class="method-start">21693 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_originalSocietyName</span>
-                <span class="method-start">16998 ms</span>
+                <span class="method-start">21829 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enter_originalSurveyNo</span>
-                <span class="method-start">17109 ms</span>
+                <span class="method-start">21980 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickOnNext_button1</span>
-                <span class="method-start">17194 ms</span>
+                <span class="method-start">22119 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterAge</span>
-                <span class="method-start">17278 ms</span>
+                <span class="method-start">22273 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectReligion</span>
-                <span class="method-start">17437 ms</span>
+                <span class="method-start">22476 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectCast</span>
-                <span class="method-start">17699 ms</span>
+                <span class="method-start">22881 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectLanguage</span>
-                <span class="method-start">17962 ms</span>
+                <span class="method-start">23347 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectFamilyType</span>
-                <span class="method-start">18227 ms</span>
+                <span class="method-start">23717 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">snterQualification</span>
-                <span class="method-start">18510 ms</span>
+                <span class="method-start">24094 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectMaritalStatus</span>
-                <span class="method-start">18595 ms</span>
+                <span class="method-start">24248 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">snterContactNo</span>
-                <span class="method-start">18847 ms</span>
+                <span class="method-start">24658 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">snterOccupation</span>
-                <span class="method-start">18942 ms</span>
+                <span class="method-start">24844 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">selectDisability</span>
-                <span class="method-start">19030 ms</span>
+                <span class="method-start">24992 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterNomineeName</span>
-                <span class="method-start">19284 ms</span>
+                <span class="method-start">26155 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterAddress</span>
-                <span class="method-start">19396 ms</span>
+                <span class="method-start">26339 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterBankName</span>
-                <span class="method-start">19489 ms</span>
+                <span class="method-start">26524 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterBankAccountNo</span>
-                <span class="method-start">19590 ms</span>
+                <span class="method-start">26692 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterBranchName</span>
-                <span class="method-start">19691 ms</span>
+                <span class="method-start">26865 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterRentAmount</span>
-                <span class="method-start">19779 ms</span>
+                <span class="method-start">27024 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterPaysRentto</span>
-                <span class="method-start">19859 ms</span>
+                <span class="method-start">27167 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterOtherDoc</span>
-                <span class="method-start">19955 ms</span>
+                <span class="method-start">27342 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterHouseholdServices</span>
-                <span class="method-start">20048 ms</span>
+                <span class="method-start">27526 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterCompanyDetails</span>
-                <span class="method-start">20172 ms</span>
+                <span class="method-start">27688 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickOnNext_button</span>
-                <span class="method-start">20272 ms</span>
+                <span class="method-start">27830 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectDocumentType</span>
+                <span class="method-start">27957 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterReferenceNo</span>
+                <span class="method-start">28364 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterRemark</span>
+                <span class="method-start">28525 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
